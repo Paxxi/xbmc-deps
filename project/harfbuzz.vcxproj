@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FC5CDFBE-6AB8-49F6-B0F0-188741F5EBF2}</ProjectGuid>
+    <RootNamespace>harfbuzz</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110_xp</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110_xp</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)deps\$(Configuration)\</OutDir>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)deps\$(Configuration)\</OutDir>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\harfbuzz\deps\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;HARFBUZZ_EXPORTS;HAVE_OT;HAVE_UNISCRIBE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\harfbuzz\deps\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;HARFBUZZ_EXPORTS;HAVE_OT;HAVE_UNISCRIBE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\freetype\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\harfbuzz\src\hb-blob.cc" />
+    <ClCompile Include="..\harfbuzz\src\hb-buffer.cc" />
+    <ClCompile Include="..\harfbuzz\src\hb-common.cc" />
+    <ClCompile Include="..\harfbuzz\src\hb-fallback-shape.cc" />
+    <ClCompile Include="..\harfbuzz\src\hb-font.cc" />
+    <ClCompile Include="..\harfbuzz\src\hb-ft.cc" />
+    <ClCompile Include="..\harfbuzz\src\hb-ot-layout.cc" />
+    <ClCompile Include="..\harfbuzz\src\hb-ot-map.cc" />
+    <ClCompile Include="..\harfbuzz\src\hb-ot-shape-complex-arabic.cc" />
+    <ClCompile Include="..\harfbuzz\src\hb-ot-shape-complex-indic.cc" />
+    <ClCompile Include="..\harfbuzz\src\hb-ot-shape-complex-misc.cc" />
+    <ClCompile Include="..\harfbuzz\src\hb-ot-shape-fallback.cc" />
+    <ClCompile Include="..\harfbuzz\src\hb-ot-shape-normalize.cc" />
+    <ClCompile Include="..\harfbuzz\src\hb-ot-shape.cc" />
+    <ClCompile Include="..\harfbuzz\src\hb-ot-tag.cc" />
+    <ClCompile Include="..\harfbuzz\src\hb-set.cc" />
+    <ClCompile Include="..\harfbuzz\src\hb-shape-plan.cc" />
+    <ClCompile Include="..\harfbuzz\src\hb-shape.cc" />
+    <ClCompile Include="..\harfbuzz\src\hb-shaper.cc" />
+    <ClCompile Include="..\harfbuzz\src\hb-tt-font.cc" />
+    <ClCompile Include="..\harfbuzz\src\hb-unicode.cc" />
+    <ClCompile Include="..\harfbuzz\src\hb-uniscribe.cc" />
+    <ClCompile Include="..\harfbuzz\src\hb-warning.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\harfbuzz\src\hb-blob.h" />
+    <ClInclude Include="..\harfbuzz\src\hb-buffer.h" />
+    <ClInclude Include="..\harfbuzz\src\hb-common.h" />
+    <ClInclude Include="..\harfbuzz\src\hb-font.h" />
+    <ClInclude Include="..\harfbuzz\src\hb-ft.h" />
+    <ClInclude Include="..\harfbuzz\src\hb-graphite2.h" />
+    <ClInclude Include="..\harfbuzz\src\hb-icu.h" />
+    <ClInclude Include="..\harfbuzz\src\hb-ot-layout.h" />
+    <ClInclude Include="..\harfbuzz\src\hb-ot-tag.h" />
+    <ClInclude Include="..\harfbuzz\src\hb-ot.h" />
+    <ClInclude Include="..\harfbuzz\src\hb-set.h" />
+    <ClInclude Include="..\harfbuzz\src\hb-shape-plan.h" />
+    <ClInclude Include="..\harfbuzz\src\hb-shape.h" />
+    <ClInclude Include="..\harfbuzz\src\hb-unicode.h" />
+    <ClInclude Include="..\harfbuzz\src\hb-uniscribe.h" />
+    <ClInclude Include="..\harfbuzz\src\hb-version.h" />
+    <ClInclude Include="..\harfbuzz\src\hb.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

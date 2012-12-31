@@ -1,0 +1,168 @@
+Determining size of off64_t failed with the following output:
+Change Dir: D:/Programmering/xbmc-deps/zlib-1.2.7/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec163177345.vcxproj /p:Configuration=Debug /p:VisualStudioVersion=11.0
+Microsoft (R) Build Engine version 4.0.30319.17929
+[Microsoft .NET Framework, version 4.0.30319.18010]
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 2012-12-29 13:51:49.
+Project "D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\cmTryCompileExec163177345.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "cmTryCompileExec163177345.dir\Debug\".
+  Creating directory "D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\Debug\".
+InitializeBuildStatus:
+  Creating "cmTryCompileExec163177345.dir\Debug\cmTryCompileExec163177345.unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _LARGEFILE64_SOURCE=1 /D HAVE_SYS_TYPES_H /D HAVE_STDINT_H /D HAVE_STDDEF_H /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec163177345.dir\Debug\\" /Fd"D:/Programmering/xbmc-deps/zlib-1.2.7/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec163177345.pdb" /Gd /TC /analyze- /errorReport:queue  /Zm1000 "D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CheckTypeSize\OFF64_T.c"
+  Microsoft (R) C/C++ Optimizing Compiler Version 17.00.51106.1 for x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _LARGEFILE64_SOURCE=1 /D HAVE_SYS_TYPES_H /D HAVE_STDINT_H /D HAVE_STDDEF_H /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec163177345.dir\Debug\\" /Fd"D:/Programmering/xbmc-deps/zlib-1.2.7/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec163177345.pdb" /Gd /TC /analyze- /errorReport:queue  /Zm1000 "D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CheckTypeSize\OFF64_T.c"
+  
+  OFF64_T.c
+D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CheckTypeSize\OFF64_T.c(19): error C2065: 'off64_t' : undeclared identifier [D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\cmTryCompileExec163177345.vcxproj]
+D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CheckTypeSize\OFF64_T.c(20): error C2065: 'off64_t' : undeclared identifier [D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\cmTryCompileExec163177345.vcxproj]
+D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CheckTypeSize\OFF64_T.c(21): error C2065: 'off64_t' : undeclared identifier [D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\cmTryCompileExec163177345.vcxproj]
+D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CheckTypeSize\OFF64_T.c(22): error C2065: 'off64_t' : undeclared identifier [D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\cmTryCompileExec163177345.vcxproj]
+D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CheckTypeSize\OFF64_T.c(23): error C2065: 'off64_t' : undeclared identifier [D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\cmTryCompileExec163177345.vcxproj]
+Done Building Project "D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\cmTryCompileExec163177345.vcxproj" (default targets) -- FAILED.
+
+Build FAILED.
+
+"D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\cmTryCompileExec163177345.vcxproj" (default target) (1) ->
+(ClCompile target) -> 
+  D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CheckTypeSize\OFF64_T.c(19): error C2065: 'off64_t' : undeclared identifier [D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\cmTryCompileExec163177345.vcxproj]
+  D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CheckTypeSize\OFF64_T.c(20): error C2065: 'off64_t' : undeclared identifier [D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\cmTryCompileExec163177345.vcxproj]
+  D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CheckTypeSize\OFF64_T.c(21): error C2065: 'off64_t' : undeclared identifier [D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\cmTryCompileExec163177345.vcxproj]
+  D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CheckTypeSize\OFF64_T.c(22): error C2065: 'off64_t' : undeclared identifier [D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\cmTryCompileExec163177345.vcxproj]
+  D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CheckTypeSize\OFF64_T.c(23): error C2065: 'off64_t' : undeclared identifier [D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\cmTryCompileExec163177345.vcxproj]
+
+    0 Warning(s)
+    5 Error(s)
+
+Time Elapsed 00:00:00.17
+
+D:/Programmering/xbmc-deps/zlib-1.2.7/CMakeFiles/CheckTypeSize/OFF64_T.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(off64_t))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining if the function fseeko exists failed with the following output:
+Change Dir: D:/Programmering/xbmc-deps/zlib-1.2.7/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec3239444344.vcxproj /p:Configuration=Debug /p:VisualStudioVersion=11.0
+Microsoft (R) Build Engine version 4.0.30319.17929
+[Microsoft .NET Framework, version 4.0.30319.18010]
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 2012-12-29 13:51:49.
+Project "D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\cmTryCompileExec3239444344.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "cmTryCompileExec3239444344.dir\Debug\".
+  Creating directory "D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\Debug\".
+InitializeBuildStatus:
+  Creating "cmTryCompileExec3239444344.dir\Debug\cmTryCompileExec3239444344.unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=fseeko /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec3239444344.dir\Debug\\" /Fd"D:/Programmering/xbmc-deps/zlib-1.2.7/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec3239444344.pdb" /Gd /TC /analyze- /errorReport:queue  /Zm1000 "C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c"
+  Microsoft (R) C/C++ Optimizing Compiler Version 17.00.51106.1 for x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=fseeko /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec3239444344.dir\Debug\\" /Fd"D:/Programmering/xbmc-deps/zlib-1.2.7/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec3239444344.pdb" /Gd /TC /analyze- /errorReport:queue  /Zm1000 "C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c"
+  
+  CheckFunctionExists.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec3239444344.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Programmering/xbmc-deps/zlib-1.2.7/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec3239444344.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Programmering/xbmc-deps/zlib-1.2.7/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec3239444344.lib" /MACHINE:X86 /SAFESEH  /machine:X86 /debug cmTryCompileExec3239444344.dir\Debug\CheckFunctionExists.obj
+CheckFunctionExists.obj : error LNK2019: unresolved external symbol _fseeko referenced in function _main [D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\cmTryCompileExec3239444344.vcxproj]
+D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec3239444344.exe : fatal error LNK1120: 1 unresolved externals [D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\cmTryCompileExec3239444344.vcxproj]
+Done Building Project "D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\cmTryCompileExec3239444344.vcxproj" (default targets) -- FAILED.
+
+Build FAILED.
+
+"D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\cmTryCompileExec3239444344.vcxproj" (default target) (1) ->
+(Link target) -> 
+  CheckFunctionExists.obj : error LNK2019: unresolved external symbol _fseeko referenced in function _main [D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\cmTryCompileExec3239444344.vcxproj]
+  D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec3239444344.exe : fatal error LNK1120: 1 unresolved externals [D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\cmTryCompileExec3239444344.vcxproj]
+
+    0 Warning(s)
+    2 Error(s)
+
+Time Elapsed 00:00:00.30
+
+
+Determining if the include file unistd.h exists failed with the following output:
+Change Dir: D:/Programmering/xbmc-deps/zlib-1.2.7/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec1676302008.vcxproj /p:Configuration=Debug /p:VisualStudioVersion=11.0
+Microsoft (R) Build Engine version 4.0.30319.17929
+[Microsoft .NET Framework, version 4.0.30319.18010]
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 2012-12-29 13:51:49.
+Project "D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\cmTryCompileExec1676302008.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "cmTryCompileExec1676302008.dir\Debug\".
+  Creating directory "D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\Debug\".
+InitializeBuildStatus:
+  Creating "cmTryCompileExec1676302008.dir\Debug\cmTryCompileExec1676302008.unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec1676302008.dir\Debug\\" /Fd"D:/Programmering/xbmc-deps/zlib-1.2.7/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec1676302008.pdb" /Gd /TC /analyze- /errorReport:queue  /Zm1000 CheckIncludeFile.c
+  Microsoft (R) C/C++ Optimizing Compiler Version 17.00.51106.1 for x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec1676302008.dir\Debug\\" /Fd"D:/Programmering/xbmc-deps/zlib-1.2.7/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec1676302008.pdb" /Gd /TC /analyze- /errorReport:queue  /Zm1000 CheckIncludeFile.c
+  
+  CheckIncludeFile.c
+CheckIncludeFile.c(1): fatal error C1083: Cannot open include file: 'unistd.h': No such file or directory [D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\cmTryCompileExec1676302008.vcxproj]
+Done Building Project "D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\cmTryCompileExec1676302008.vcxproj" (default targets) -- FAILED.
+
+Build FAILED.
+
+"D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\cmTryCompileExec1676302008.vcxproj" (default target) (1) ->
+(ClCompile target) -> 
+  CheckIncludeFile.c(1): fatal error C1083: Cannot open include file: 'unistd.h': No such file or directory [D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\cmTryCompileExec1676302008.vcxproj]
+
+    0 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:00.12
+
+

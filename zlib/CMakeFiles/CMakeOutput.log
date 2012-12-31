@@ -1,0 +1,236 @@
+The system is: Windows - 6.2 - x86
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler:  
+Build flags: 
+Id flags: 
+
+The output was:
+0
+Microsoft (R) Build Engine version 4.0.30319.17929
+[Microsoft .NET Framework, version 4.0.30319.18010]
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 2012-12-29 13:51:45.
+Project "D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\2.8.10.2\CompilerIdC\CompilerIdC.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "Debug\".
+InitializeBuildStatus:
+  Creating "Debug\CompilerIdC.unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /nologo /W0 /WX- /Od /Oy- /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:queue CMakeCCompilerId.c
+  CMakeCCompilerId.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdC.lib" /MACHINE:X86 /SAFESEH Debug\CMakeCCompilerId.obj
+  CompilerIdC.vcxproj -> D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\2.8.10.2\CompilerIdC\.\CompilerIdC.exe
+PostBuildEvent:
+  for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+  :VCEnd
+  CMAKE_C_COMPILER=C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\cl.exe
+FinalizeBuildStatus:
+  Deleting file "Debug\CompilerIdC.unsuccessfulbuild".
+  Touching "Debug\CompilerIdC.lastbuildstate".
+Done Building Project "D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\2.8.10.2\CompilerIdC\CompilerIdC.vcxproj" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.30
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+
+The C compiler identification is MSVC, found in "D:/Programmering/xbmc-deps/zlib-1.2.7/CMakeFiles/2.8.10.2/CompilerIdC/CompilerIdC.exe"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: D:/Programmering/xbmc-deps/zlib-1.2.7/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec2434937786.vcxproj /p:Configuration=Debug /p:VisualStudioVersion=11.0
+Microsoft (R) Build Engine version 4.0.30319.17929
+[Microsoft .NET Framework, version 4.0.30319.18010]
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 2012-12-29 13:51:46.
+Project "D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\cmTryCompileExec2434937786.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "cmTryCompileExec2434937786.dir\Debug\".
+  Creating directory "D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\Debug\".
+InitializeBuildStatus:
+  Creating "cmTryCompileExec2434937786.dir\Debug\cmTryCompileExec2434937786.unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec2434937786.dir\Debug\\" /Fd"D:/Programmering/xbmc-deps/zlib-1.2.7/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec2434937786.pdb" /Gd /TC /analyze- /errorReport:queue  /Zm1000 testCCompiler.c
+  Microsoft (R) C/C++ Optimizing Compiler Version 17.00.51106.1 for x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec2434937786.dir\Debug\\" /Fd"D:/Programmering/xbmc-deps/zlib-1.2.7/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec2434937786.pdb" /Gd /TC /analyze- /errorReport:queue  /Zm1000 testCCompiler.c
+  
+  testCCompiler.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec2434937786.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Programmering/xbmc-deps/zlib-1.2.7/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec2434937786.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Programmering/xbmc-deps/zlib-1.2.7/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec2434937786.lib" /MACHINE:X86 /SAFESEH  /machine:X86 /debug cmTryCompileExec2434937786.dir\Debug\testCCompiler.obj
+  cmTryCompileExec2434937786.vcxproj -> D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec2434937786.exe
+FinalizeBuildStatus:
+  Deleting file "cmTryCompileExec2434937786.dir\Debug\cmTryCompileExec2434937786.unsuccessfulbuild".
+  Touching "cmTryCompileExec2434937786.dir\Debug\cmTryCompileExec2434937786.lastbuildstate".
+Done Building Project "D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\cmTryCompileExec2434937786.vcxproj" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.30
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: D:/Programmering/xbmc-deps/zlib-1.2.7/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec4227471294.vcxproj /p:Configuration=Debug /p:VisualStudioVersion=11.0
+Microsoft (R) Build Engine version 4.0.30319.17929
+[Microsoft .NET Framework, version 4.0.30319.18010]
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 2012-12-29 13:51:46.
+Project "D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\cmTryCompileExec4227471294.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "cmTryCompileExec4227471294.dir\Debug\".
+  Creating directory "D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\Debug\".
+InitializeBuildStatus:
+  Creating "cmTryCompileExec4227471294.dir\Debug\cmTryCompileExec4227471294.unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec4227471294.dir\Debug\\" /Fd"D:/Programmering/xbmc-deps/zlib-1.2.7/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec4227471294.pdb" /Gd /TC /analyze- /errorReport:queue  /Zm1000 "C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompilerABI.c"
+  Microsoft (R) C/C++ Optimizing Compiler Version 17.00.51106.1 for x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec4227471294.dir\Debug\\" /Fd"D:/Programmering/xbmc-deps/zlib-1.2.7/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec4227471294.pdb" /Gd /TC /analyze- /errorReport:queue  /Zm1000 "C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompilerABI.c"
+  
+  CMakeCCompilerABI.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec4227471294.exe" /INCREMENTAL /NOLOGO /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Programmering/xbmc-deps/zlib-1.2.7/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec4227471294.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Programmering/xbmc-deps/zlib-1.2.7/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec4227471294.lib" /MACHINE:X86 /SAFESEH  /machine:X86 /debug cmTryCompileExec4227471294.dir\Debug\CMakeCCompilerABI.obj
+  cmTryCompileExec4227471294.vcxproj -> D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec4227471294.exe
+FinalizeBuildStatus:
+  Deleting file "cmTryCompileExec4227471294.dir\Debug\cmTryCompileExec4227471294.unsuccessfulbuild".
+  Touching "cmTryCompileExec4227471294.dir\Debug\cmTryCompileExec4227471294.lastbuildstate".
+Done Building Project "D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\cmTryCompileExec4227471294.vcxproj" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.35
+
+
+Determining if the include file sys/types.h exists passed with the following output:
+Change Dir: D:/Programmering/xbmc-deps/zlib-1.2.7/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec4042898962.vcxproj /p:Configuration=Debug /p:VisualStudioVersion=11.0
+Microsoft (R) Build Engine version 4.0.30319.17929
+[Microsoft .NET Framework, version 4.0.30319.18010]
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 2012-12-29 13:51:47.
+Project "D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\cmTryCompileExec4042898962.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "cmTryCompileExec4042898962.dir\Debug\".
+  Creating directory "D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\Debug\".
+InitializeBuildStatus:
+  Creating "cmTryCompileExec4042898962.dir\Debug\cmTryCompileExec4042898962.unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec4042898962.dir\Debug\\" /Fd"D:/Programmering/xbmc-deps/zlib-1.2.7/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec4042898962.pdb" /Gd /TC /analyze- /errorReport:queue  /Zm1000 CheckIncludeFile.c
+  Microsoft (R) C/C++ Optimizing Compiler Version 17.00.51106.1 for x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec4042898962.dir\Debug\\" /Fd"D:/Programmering/xbmc-deps/zlib-1.2.7/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec4042898962.pdb" /Gd /TC /analyze- /errorReport:queue  /Zm1000 CheckIncludeFile.c
+  
+  CheckIncludeFile.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec4042898962.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Programmering/xbmc-deps/zlib-1.2.7/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec4042898962.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Programmering/xbmc-deps/zlib-1.2.7/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec4042898962.lib" /MACHINE:X86 /SAFESEH  /machine:X86 /debug cmTryCompileExec4042898962.dir\Debug\CheckIncludeFile.obj
+  cmTryCompileExec4042898962.vcxproj -> D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec4042898962.exe
+FinalizeBuildStatus:
+  Deleting file "cmTryCompileExec4042898962.dir\Debug\cmTryCompileExec4042898962.unsuccessfulbuild".
+  Touching "cmTryCompileExec4042898962.dir\Debug\cmTryCompileExec4042898962.lastbuildstate".
+Done Building Project "D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\cmTryCompileExec4042898962.vcxproj" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.32
+
+
+Determining if the include file stdint.h exists passed with the following output:
+Change Dir: D:/Programmering/xbmc-deps/zlib-1.2.7/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec2764574157.vcxproj /p:Configuration=Debug /p:VisualStudioVersion=11.0
+Microsoft (R) Build Engine version 4.0.30319.17929
+[Microsoft .NET Framework, version 4.0.30319.18010]
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 2012-12-29 13:51:47.
+Project "D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\cmTryCompileExec2764574157.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "cmTryCompileExec2764574157.dir\Debug\".
+  Creating directory "D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\Debug\".
+InitializeBuildStatus:
+  Creating "cmTryCompileExec2764574157.dir\Debug\cmTryCompileExec2764574157.unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec2764574157.dir\Debug\\" /Fd"D:/Programmering/xbmc-deps/zlib-1.2.7/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec2764574157.pdb" /Gd /TC /analyze- /errorReport:queue  /Zm1000 CheckIncludeFile.c
+  Microsoft (R) C/C++ Optimizing Compiler Version 17.00.51106.1 for x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec2764574157.dir\Debug\\" /Fd"D:/Programmering/xbmc-deps/zlib-1.2.7/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec2764574157.pdb" /Gd /TC /analyze- /errorReport:queue  /Zm1000 CheckIncludeFile.c
+  
+  CheckIncludeFile.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec2764574157.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Programmering/xbmc-deps/zlib-1.2.7/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec2764574157.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Programmering/xbmc-deps/zlib-1.2.7/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec2764574157.lib" /MACHINE:X86 /SAFESEH  /machine:X86 /debug cmTryCompileExec2764574157.dir\Debug\CheckIncludeFile.obj
+  cmTryCompileExec2764574157.vcxproj -> D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec2764574157.exe
+FinalizeBuildStatus:
+  Deleting file "cmTryCompileExec2764574157.dir\Debug\cmTryCompileExec2764574157.unsuccessfulbuild".
+  Touching "cmTryCompileExec2764574157.dir\Debug\cmTryCompileExec2764574157.lastbuildstate".
+Done Building Project "D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\cmTryCompileExec2764574157.vcxproj" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.30
+
+
+Determining if the include file stddef.h exists passed with the following output:
+Change Dir: D:/Programmering/xbmc-deps/zlib-1.2.7/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec3767295391.vcxproj /p:Configuration=Debug /p:VisualStudioVersion=11.0
+Microsoft (R) Build Engine version 4.0.30319.17929
+[Microsoft .NET Framework, version 4.0.30319.18010]
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 2012-12-29 13:51:48.
+Project "D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\cmTryCompileExec3767295391.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "cmTryCompileExec3767295391.dir\Debug\".
+  Creating directory "D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\Debug\".
+InitializeBuildStatus:
+  Creating "cmTryCompileExec3767295391.dir\Debug\cmTryCompileExec3767295391.unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec3767295391.dir\Debug\\" /Fd"D:/Programmering/xbmc-deps/zlib-1.2.7/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec3767295391.pdb" /Gd /TC /analyze- /errorReport:queue  /Zm1000 CheckIncludeFile.c
+  Microsoft (R) C/C++ Optimizing Compiler Version 17.00.51106.1 for x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec3767295391.dir\Debug\\" /Fd"D:/Programmering/xbmc-deps/zlib-1.2.7/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec3767295391.pdb" /Gd /TC /analyze- /errorReport:queue  /Zm1000 CheckIncludeFile.c
+  
+  CheckIncludeFile.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec3767295391.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Programmering/xbmc-deps/zlib-1.2.7/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec3767295391.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Programmering/xbmc-deps/zlib-1.2.7/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec3767295391.lib" /MACHINE:X86 /SAFESEH  /machine:X86 /debug cmTryCompileExec3767295391.dir\Debug\CheckIncludeFile.obj
+  cmTryCompileExec3767295391.vcxproj -> D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec3767295391.exe
+FinalizeBuildStatus:
+  Deleting file "cmTryCompileExec3767295391.dir\Debug\cmTryCompileExec3767295391.unsuccessfulbuild".
+  Touching "cmTryCompileExec3767295391.dir\Debug\cmTryCompileExec3767295391.lastbuildstate".
+Done Building Project "D:\Programmering\xbmc-deps\zlib-1.2.7\CMakeFiles\CMakeTmp\cmTryCompileExec3767295391.vcxproj" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.44
+
+

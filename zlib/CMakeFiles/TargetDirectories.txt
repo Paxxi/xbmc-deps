@@ -1,0 +1,6 @@
+D:/Programmering/xbmc-deps/zlib-1.2.7/CMakeFiles/ALL_BUILD.dir
+D:/Programmering/xbmc-deps/zlib-1.2.7/CMakeFiles/ZERO_CHECK.dir
+D:/Programmering/xbmc-deps/zlib-1.2.7/CMakeFiles/example.dir
+D:/Programmering/xbmc-deps/zlib-1.2.7/CMakeFiles/minigzip.dir
+D:/Programmering/xbmc-deps/zlib-1.2.7/CMakeFiles/zlib.dir
+D:/Programmering/xbmc-deps/zlib-1.2.7/CMakeFiles/zlibstatic.dir
