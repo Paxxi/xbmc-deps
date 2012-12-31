@@ -16,6 +16,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "harfbuzz", "harfbuzz.vcxpro
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "freetype", "freetype.vcxproj", "{6CE2A082-6049-4789-BD94-8A03E7ACD8A5}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "bzip2", "bzip2.vcxproj", "{1A9C1915-EEAE-40C7-902C-49CB3526F0BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -46,6 +48,10 @@ Global
 		{6CE2A082-6049-4789-BD94-8A03E7ACD8A5}.Debug|Win32.Build.0 = Debug|Win32
 		{6CE2A082-6049-4789-BD94-8A03E7ACD8A5}.Release|Win32.ActiveCfg = Release|Win32
 		{6CE2A082-6049-4789-BD94-8A03E7ACD8A5}.Release|Win32.Build.0 = Release|Win32
+		{1A9C1915-EEAE-40C7-902C-49CB3526F0BE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1A9C1915-EEAE-40C7-902C-49CB3526F0BE}.Debug|Win32.Build.0 = Debug|Win32
+		{1A9C1915-EEAE-40C7-902C-49CB3526F0BE}.Release|Win32.ActiveCfg = Release|Win32
+		{1A9C1915-EEAE-40C7-902C-49CB3526F0BE}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
