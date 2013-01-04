@@ -54,7 +54,7 @@
       <Optimization>Disabled</Optimization>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <MinimalRebuild>false</MinimalRebuild>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;HAVE_CONFIG_H;MAKE_TAGLIB_LIB;_ITERATOR_DEBUG_LEVEL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;NDEBUG;HAVE_CONFIG_H;TAGLIB_STATIC;_ALLOW_RUNTIME_LIBRARY_MISMATCH;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>..\taglib;..\taglib\taglib;..\taglib\taglib\ape;..\taglib\taglib\asf;..\taglib\taglib\flac;..\taglib\taglib\it;..\taglib\taglib\mod;..\taglib\taglib\mp4;..\taglib\taglib\mpc;..\taglib\taglib\mpeg;..\taglib\taglib\mpeg\id3v1;..\taglib\taglib\mpeg\id3v2;..\taglib\taglib\mpeg\id3v2\frames;..\taglib\taglib\ogg;..\taglib\taglib\ogg\flac;..\taglib\taglib\ogg\opus;..\taglib\taglib\ogg\speex;..\taglib\taglib\ogg\vorbis;..\taglib\taglib\riff;..\taglib\taglib\riff\aiff;..\taglib\taglib\riff\wav;..\taglib\taglib\s3m;..\taglib\taglib\toolkit;..\taglib\taglib\trueaudio;..\taglib\taglib\wavpack;..\taglib\taglib\xm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
@@ -70,7 +70,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <AdditionalIncludeDirectories>..\taglib;..\taglib\taglib;..\taglib\taglib\ape;..\taglib\taglib\asf;..\taglib\taglib\flac;..\taglib\taglib\it;..\taglib\taglib\mod;..\taglib\taglib\mp4;..\taglib\taglib\mpc;..\taglib\taglib\mpeg;..\taglib\taglib\mpeg\id3v1;..\taglib\taglib\mpeg\id3v2;..\taglib\taglib\mpeg\id3v2\frames;..\taglib\taglib\ogg;..\taglib\taglib\ogg\flac;..\taglib\taglib\ogg\opus;..\taglib\taglib\ogg\speex;..\taglib\taglib\ogg\vorbis;..\taglib\taglib\riff;..\taglib\taglib\riff\aiff;..\taglib\taglib\riff\wav;..\taglib\taglib\s3m;..\taglib\taglib\toolkit;..\taglib\taglib\trueaudio;..\taglib\taglib\wavpack;..\taglib\taglib\xm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;HAVE_CONFIG_H;MAKE_TAGLIB_LIB;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;HAVE_CONFIG_H;NDEBUG;TAGLIB_STATIC;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
