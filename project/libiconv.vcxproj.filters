@@ -37,5 +37,8 @@
     <ClInclude Include="..\libiconv\libiconv\relocatable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\libiconv\include\iconv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
