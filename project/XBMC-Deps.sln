@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 2012 for Windows Desktop
+# Visual Studio 2012
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "taglib", "taglib.vcxproj", "{DAE7A9E7-8AB2-4A57-AFA0-115652863933}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zlib", "zlib.vcxproj", "{7241A9C8-BD34-4103-8D51-A2EA194503C6}"
@@ -17,6 +17,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "freetype", "freetype.vcxproj", "{6CE2A082-6049-4789-BD94-8A03E7ACD8A5}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "bzip2", "bzip2.vcxproj", "{1A9C1915-EEAE-40C7-902C-49CB3526F0BE}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libmicrohttpd", "libmicrohttpd.vcxproj", "{D9B23C24-1AFF-403F-ADD9-F084EE9044E3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -52,6 +54,10 @@ Global
 		{1A9C1915-EEAE-40C7-902C-49CB3526F0BE}.Debug|Win32.Build.0 = Debug|Win32
 		{1A9C1915-EEAE-40C7-902C-49CB3526F0BE}.Release|Win32.ActiveCfg = Release|Win32
 		{1A9C1915-EEAE-40C7-902C-49CB3526F0BE}.Release|Win32.Build.0 = Release|Win32
+		{D9B23C24-1AFF-403F-ADD9-F084EE9044E3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D9B23C24-1AFF-403F-ADD9-F084EE9044E3}.Debug|Win32.Build.0 = Debug|Win32
+		{D9B23C24-1AFF-403F-ADD9-F084EE9044E3}.Release|Win32.ActiveCfg = Release|Win32
+		{D9B23C24-1AFF-403F-ADD9-F084EE9044E3}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -2041,11 +2041,11 @@ create_socket (int domain, int type, int protocol)
  
   /* use SOCK_STREAM rather than ai_socktype: some getaddrinfo
    * implementations do not set ai_socktype, e.g. RHL6.2. */
-  fd = SOCKET (domain, ctype, protocol);
+  fd = socket (domain, ctype, protocol);
   if ( (-1 == fd) && (EINVAL == errno) && (0 != sock_cloexec) )
   {
     sock_cloexec = 0;
-    fd = SOCKET(domain, type, protocol);
+    fd = socket(domain, type, protocol);
   }
   if (-1 == fd)
     return -1;

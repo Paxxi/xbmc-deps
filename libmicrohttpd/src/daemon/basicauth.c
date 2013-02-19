@@ -113,7 +113,7 @@ MHD_queue_basic_auth_fail_response (struct MHD_Connection *connection,
 {
   int ret;
   size_t hlen = strlen(realm) + strlen("Basic realm=\"\"") + 1;
-  char header[hlen];
+  char* header = (char*)malloc(hlen);
 
   snprintf (header, 
 	    sizeof (header), 
@@ -126,6 +126,7 @@ MHD_queue_basic_auth_fail_response (struct MHD_Connection *connection,
     ret = MHD_queue_response (connection, 
 			      MHD_HTTP_UNAUTHORIZED, 
 			      response);
+  free(header);
   return ret;
 }
 

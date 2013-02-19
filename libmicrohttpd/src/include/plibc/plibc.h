@@ -75,7 +75,7 @@ struct stat64
 {
     _dev_t st_dev;
     _ino_t st_ino;
-    _mode_t st_mode;
+    unsigned short st_mode;
     short st_nlink;
     short st_uid;
     short st_gid;
@@ -335,6 +335,9 @@ typedef struct
 
 #define SetErrnoFromWinError(e) _SetErrnoFromWinError(e, __FILE__, __LINE__)
 
+typedef unsigned short mode_t;
+#define __const const
+
 BOOL _plibc_CreateShortcut(const char *pszSrc, const char *pszDest);
 BOOL _plibc_CreateShortcutW(const wchar_t *pwszSrc, const wchar_t *pwszDest);
 BOOL _plibc_DereferenceShortcut(char *pszShortcut);
@@ -366,7 +369,7 @@ void plibc_set_panic_proc(TPanicProc proc);
 
 int flock(int fd, int operation);
 int fsync(int fildes);
-int inet_pton(int af, const char *src, void *dst);
+//int inet_pton(int af, const char *src, void *dst);
 int inet_pton4(const char *src, u_char *dst, int pton);
 #if USE_IPV6
 int inet_pton6(const char *src, u_char *dst);
@@ -376,7 +379,7 @@ int statfs(const char *path, struct statfs *buf);
 const char *hstrerror(int err);
 int mkstemp(char *tmplate);
 char *strptime (const char *buf, const char *format, struct tm *tm);
-const char *inet_ntop(int af, const void *src, char *dst, size_t size);
+//const char *inet_ntop(int af, const void *src, char *dst, size_t size);
 #ifndef gmtime_r
 struct tm *gmtime_r(const time_t *clock, struct tm *result);
 #endif
@@ -744,7 +747,7 @@ void _win_remque (void *__elem);
 
 
 /* For use with hsearch(3).  */
-typedef int (*PLIBC_SEARCH__compar_fn_t) (__const void *, __const void *);
+typedef int (*PLIBC_SEARCH__compar_fn_t) (const void *, const void *);
 
 typedef PLIBC_SEARCH__compar_fn_t _win_comparison_fn_t;
 
@@ -835,7 +838,7 @@ void *_win_tdelete (__const void *__restrict __key,
           void **__restrict __rootp,
           PLIBC_SEARCH__compar_fn_t __compar);
 
-typedef void (*PLIBC_SEARCH__action_fn_t) (__const void *__nodep, PLIBC_SEARCH_VISIT __value,
+typedef void (*PLIBC_SEARCH__action_fn_t) (__const void *__nodep, PLIBC_SEARCH_VISIT __val,
              int __level);
 
 /* Walk through the whole tree and call the ACTION callback for every node

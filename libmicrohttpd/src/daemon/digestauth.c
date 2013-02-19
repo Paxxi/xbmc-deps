@@ -473,15 +473,16 @@ check_argument_match (struct MHD_Connection *connection,
 {
   struct MHD_HTTP_Header *pos;
   size_t slen = strlen (args) + 1;
-  char argb[slen];
+  //char argb[slen];
   char *argp;
   char *equals;
   char *amper;
   unsigned int num_headers;
 
   num_headers = 0;
-  memcpy (argb, args, slen);
-  argp = argb;
+  //memcpy (argb, args, slen);
+  //argp = argb;
+  argp = args;
   while ( (NULL != argp) &&
 	  ('\0' != argp[0]) )
     {
@@ -607,12 +608,15 @@ MHD_digest_auth_check (struct MHD_Connection *connection,
   left -= strlen ("nonce") + len;
 
   {
-    char uri[left];  
+    char* uri = (char*)malloc(left);  
   
     if (0 == lookup_sub_value(uri,
-			      sizeof (uri),
+			      left,
 			      header, "uri")) 
+    {
+      free(uri);
       return MHD_NO;
+    }
       
     /* 8 = 4 hexadecimal numbers for the timestamp */  
     nonce_time = strtoul(nonce + len - 8, (char **)NULL, 16);  
@@ -624,7 +628,10 @@ MHD_digest_auth_check (struct MHD_Connection *connection,
      */
     if ( (t > nonce_time + nonce_timeout) ||
 	 (nonce_time + nonce_timeout < nonce_time) )
+    {
+      free(uri);
       return MHD_INVALID_NONCE;
+    }
     if (0 != strncmp (uri,
 		      connection->url,
 		      strlen (connection->url)))
@@ -633,6 +640,7 @@ MHD_digest_auth_check (struct MHD_Connection *connection,
       MHD_DLOG (connection->daemon, 
 		"Authentication failed, URI does not match.\n");
 #endif
+      free(uri);
       return MHD_NO;
     }
     {
@@ -650,7 +658,8 @@ MHD_digest_auth_check (struct MHD_Connection *connection,
 	MHD_DLOG (connection->daemon, 
 		  "Authentication failed, arguments do not match.\n");
 #endif
-	return MHD_NO;
+        free(uri);
+	      return MHD_NO;
       }
     }
     calculate_nonce (nonce_time,
@@ -685,6 +694,7 @@ MHD_digest_auth_check (struct MHD_Connection *connection,
       MHD_DLOG (connection->daemon, 
 		"Authentication failed, invalid format.\n");
 #endif
+      free(uri);
       return MHD_NO;
     }
     nci = strtoul (nc, &end, 16);
@@ -696,6 +706,7 @@ MHD_digest_auth_check (struct MHD_Connection *connection,
       MHD_DLOG (connection->daemon, 
 		"Authentication failed, invalid format.\n");
 #endif
+      free(uri);
       return MHD_NO; /* invalid nonce format */
     }
     /*
@@ -705,7 +716,10 @@ MHD_digest_auth_check (struct MHD_Connection *connection,
      */
     
     if (MHD_YES != check_nonce_nc (connection, nonce, nci))
+    {
+      free(uri);
       return MHD_NO;
+    }
     
     digest_calc_ha1("md5",
 		    username,
@@ -723,6 +737,7 @@ MHD_digest_auth_check (struct MHD_Connection *connection,
 			  uri,
 			  hentity,
 			  respexp);  
+    free(uri);
     return (0 == strcmp(response, respexp)) 
       ? MHD_YES 
       : MHD_NO;
@@ -778,7 +793,7 @@ MHD_queue_auth_fail_response (struct MHD_Connection *connection,
 		   ? ",stale=\"true\"" 
 		   : "");
   {
-    char header[hlen + 1];
+    char* header = (char*)malloc(hlen + 1);
 
     snprintf (header,
 	      sizeof(header),
@@ -792,6 +807,7 @@ MHD_queue_auth_fail_response (struct MHD_Connection *connection,
     ret = MHD_add_response_header(response,
 				  MHD_HTTP_HEADER_WWW_AUTHENTICATE, 
 				  header);
+    free(header);
   }
   if (MHD_YES == ret) 
     ret = MHD_queue_response(connection, 

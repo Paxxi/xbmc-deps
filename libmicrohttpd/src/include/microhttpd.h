@@ -90,6 +90,7 @@ extern "C"
    you always include *before* "microhttpd.h".  Then the following
    "standard" includes won't be used (which might be a good
    idea, especially on platforms where they do not exist). */
+#define WIN32_LEAN_AND_MEAN
 #ifndef MHD_PLATFORM_H
 #include <unistd.h>
 #include <stdarg.h>

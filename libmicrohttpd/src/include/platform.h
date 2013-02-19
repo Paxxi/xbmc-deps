@@ -55,6 +55,8 @@
 #include <signal.h>
 #include <stddef.h>
 #undef HAVE_CONFIG_H
+#define WIN32_LEAN_AND_MEAN 1
+#define snprintf _snprintf
 #include <pthread.h>
 #define HAVE_CONFIG_H 1
 
