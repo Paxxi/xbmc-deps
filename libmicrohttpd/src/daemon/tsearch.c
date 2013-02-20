@@ -11,9 +11,9 @@
  * Totally public domain.
  */
 
-//#include <sys/cdefs.h>
+#include <sys/cdefs.h>
 #define _SEARCH_PRIVATE
-#include "tsearch.h"
+#include <tsearch.h>
 #include <stdlib.h>
 
 /* find or insert datum into search tree */

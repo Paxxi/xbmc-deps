@@ -9,7 +9,7 @@
 #ifndef _SEARCH_H_
 #define _SEARCH_H_
 
-//#include <sys/cdefs.h>
+#include <sys/cdefs.h>
 #include <sys/types.h>
 
 typedef	enum {
@@ -26,6 +26,7 @@ typedef	struct node {
 } node_t;
 #endif
 
+__BEGIN_DECLS
 void	*tdelete(const void * __restrict, void ** __restrict,
 	    int (*)(const void *, const void *));
 void	*tfind(const void *, void * const *,
@@ -33,5 +34,6 @@ void	*tfind(const void *, void * const *,
 void	*tsearch(const void *, void **, int (*)(const void *, const void *));
 void	 twalk(const void *, void (*)(const void *, VISIT, int));
 void	 tdestroy(void *, void (*)(void *));
+__END_DECLS
 
 #endif /* !_SEARCH_H_ */

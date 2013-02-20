@@ -93,7 +93,7 @@
 /* #undef HAVE_NETINET_TCP_H */
 
 /* Define to 1 if you have the <plibc.h> header file. */
-#define HAVE_PLIBC_H 0
+#define HAVE_PLIBC_H 1
 
 /* Define to 1 if you have the <poll.h> header file. */
 /* #undef HAVE_POLL_H */
@@ -287,8 +287,14 @@
 
 /* This is a Windows system */
 #define WINDOWS 1
-#define _WIN32
-#define WIN32_LEAN_AND_MEAN
+#define _WIN32 1
+#define WIN32_LEAN_AND_MEAN 1
+#define snprintf _snprintf
+#define HAVE_STRNLEN 1
+
+typedef unsigned int _mode_t;
+typedef unsigned int mode_t;
+#define __const const
 
 /* Define WORDS_BIGENDIAN to 1 if your processor stores words with the most
    significant byte first (like Motorola and SPARC, unlike Intel). */

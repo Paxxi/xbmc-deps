@@ -75,7 +75,7 @@ struct stat64
 {
     _dev_t st_dev;
     _ino_t st_ino;
-    unsigned short st_mode;
+    _mode_t st_mode;
     short st_nlink;
     short st_uid;
     short st_gid;
@@ -334,9 +334,6 @@ typedef struct
 #define SIGTERM 15
 
 #define SetErrnoFromWinError(e) _SetErrnoFromWinError(e, __FILE__, __LINE__)
-
-typedef unsigned short mode_t;
-#define __const const
 
 BOOL _plibc_CreateShortcut(const char *pszSrc, const char *pszDest);
 BOOL _plibc_CreateShortcutW(const wchar_t *pwszSrc, const wchar_t *pwszDest);
@@ -747,7 +744,7 @@ void _win_remque (void *__elem);
 
 
 /* For use with hsearch(3).  */
-typedef int (*PLIBC_SEARCH__compar_fn_t) (const void *, const void *);
+typedef int (*PLIBC_SEARCH__compar_fn_t) (__const void *, __const void *);
 
 typedef PLIBC_SEARCH__compar_fn_t _win_comparison_fn_t;
 
