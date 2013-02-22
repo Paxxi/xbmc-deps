@@ -230,7 +230,7 @@ enum
 #define MAP_SHARED  0x1
 #define MAP_PRIVATE 0x2 /* unsupported */
 #define MAP_FIXED   0x10
-#define MAP_ANONYMOUS 0x20 /* unsupported */
+//#define MAP_ANONYMOUS 0x20 /* unsupported */
 #define MAP_FAILED  ((void *)-1)
 
 #define MS_ASYNC        1       /* sync memory asynchronously */

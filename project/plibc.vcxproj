@@ -91,12 +91,8 @@
     <ClCompile Include="..\plibc\src\fwrite.c" />
     <ClCompile Include="..\plibc\src\gettimeofday.c" />
     <ClCompile Include="..\plibc\src\gmtime_r.c" />
-    <ClCompile Include="..\plibc\src\hsearch.c" />
-    <ClCompile Include="..\plibc\src\hsearch_r.c" />
     <ClCompile Include="..\plibc\src\intl.c" />
-    <ClCompile Include="..\plibc\src\kill.c" />
     <ClCompile Include="..\plibc\src\langinfo.c" />
-    <ClCompile Include="..\plibc\src\lsearch.c" />
     <ClCompile Include="..\plibc\src\mkstemp.c" />
     <ClCompile Include="..\plibc\src\mmap.c" />
     <ClCompile Include="..\plibc\src\open.c" />
@@ -104,17 +100,14 @@
     <ClCompile Include="..\plibc\src\pid.c" />
     <ClCompile Include="..\plibc\src\pipe.c" />
     <ClCompile Include="..\plibc\src\plibc.c" />
-    <ClCompile Include="..\plibc\src\printf.c" />
     <ClCompile Include="..\plibc\src\random.c" />
     <ClCompile Include="..\plibc\src\read.c" />
     <ClCompile Include="..\plibc\src\readlink.c" />
     <ClCompile Include="..\plibc\src\realpath.c" />
-    <ClCompile Include="..\plibc\src\registry.c" />
     <ClCompile Include="..\plibc\src\remove.c" />
     <ClCompile Include="..\plibc\src\rename.c" />
     <ClCompile Include="..\plibc\src\rmdir.c" />
     <ClCompile Include="..\plibc\src\select.c" />
-    <ClCompile Include="..\plibc\src\shortcut.c" />
     <ClCompile Include="..\plibc\src\socket.c" />
     <ClCompile Include="..\plibc\src\stat.c" />
     <ClCompile Include="..\plibc\src\statfs.c" />
@@ -124,7 +117,6 @@
     <ClCompile Include="..\plibc\src\symlink.c" />
     <ClCompile Include="..\plibc\src\sysconf.c" />
     <ClCompile Include="..\plibc\src\truncate.c" />
-    <ClCompile Include="..\plibc\src\tsearch.c" />
     <ClCompile Include="..\plibc\src\unlink.c" />
     <ClCompile Include="..\plibc\src\write.c" />
   </ItemGroup>

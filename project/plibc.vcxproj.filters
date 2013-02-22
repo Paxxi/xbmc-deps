@@ -80,22 +80,10 @@
     <ClCompile Include="..\plibc\src\gmtime_r.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\plibc\src\hsearch.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\plibc\src\hsearch_r.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\plibc\src\intl.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\plibc\src\kill.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\plibc\src\langinfo.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\plibc\src\lsearch.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\plibc\src\mkstemp.c">
@@ -119,9 +107,6 @@
     <ClCompile Include="..\plibc\src\plibc.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\plibc\src\printf.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\plibc\src\random.c">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -134,9 +119,6 @@
     <ClCompile Include="..\plibc\src\realpath.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\plibc\src\registry.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\plibc\src\remove.c">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -147,9 +129,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\plibc\src\select.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\plibc\src\shortcut.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\plibc\src\socket.c">
@@ -177,9 +156,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\plibc\src\truncate.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\plibc\src\tsearch.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\plibc\src\unlink.c">

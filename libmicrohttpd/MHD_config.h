@@ -102,7 +102,7 @@
 #define HAVE_PTHREAD_H 1
 
 /* Define to 1 if you have the <search.h> header file. */
-#define HAVE_SEARCH_H 1
+//#define HAVE_SEARCH_H 1
 
 /* Do we have sockaddr_in.sin_len? */
 /* #undef HAVE_SOCKADDR_IN_SIN_LEN */

@@ -1002,7 +1002,7 @@ typedef int
  *    MHD_CONTENT_READER_END_WITH_ERROR and MHD_CONTENT_READER_END_OF_STREAM.
  *    This is not a limitation of MHD but rather of the HTTP protocol.
  */
-typedef ssize_t
+typedef int
   (*MHD_ContentReaderCallback) (void *cls,
 				uint64_t pos,
 				char *buf,

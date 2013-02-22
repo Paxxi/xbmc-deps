@@ -85,6 +85,9 @@
     <ClInclude Include="..\libmicrohttpd\src\daemon\tsearch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\libmicrohttpd\src\include\plibc\plibc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\libmicrohttpd\src\daemon\EXPORT.sym" />

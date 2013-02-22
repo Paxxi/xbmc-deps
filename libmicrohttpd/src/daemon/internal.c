@@ -86,6 +86,21 @@ MHD_state_to_string (enum MHD_CONNECTION_STATE state)
 #endif
 
 #if HAVE_MESSAGES
+void
+MHD_DLOG_WIN (const struct MHD_Daemon *daemon, const char *format,
+              unsigned int error)
+{
+  char *buf = 0;
+
+  if ((daemon->options & MHD_USE_DEBUG) == 0)
+    return;
+  if (!FormatMessageA(FORMAT_MESSAGE_ALLOCATE_BUFFER | FORMAT_MESSAGE_FROM_SYSTEM, 0, 
+                 error, 0, buf, 10, NULL))
+      return;
+  
+  MHD_DLOG(daemon, format, buf);
+  LocalFree(buf);
+}
 /**
  * fprintf-like helper function for logging debug
  * messages.
@@ -165,6 +180,16 @@ time_t MHD_monotonic_time(void)
 	return ts.tv_sec;
 #endif
     return time(NULL);
+}
+
+struct tm *gmtime_r(const time_t* timer, struct tm *extra)
+{
+  struct tm *result = NULL;
+  result = gmtime(timer);
+  if (0 == result)
+    return 0;
+  memcpy(extra, result, sizeof(struct tm));
+  return result;
 }
 
 /* end of internal.c */

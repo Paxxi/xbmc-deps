@@ -1179,10 +1179,9 @@ MHD_accept_connection (struct MHD_Daemon *daemon)
         !SetHandleInformation ((HANDLE) s, HANDLE_FLAG_INHERIT, 0)))
       {
 #if HAVE_MESSAGES
-        SetErrnoFromWinError (GetLastError ());
-	MHD_DLOG (daemon,
+	MHD_DLOG_WIN (daemon,
 		  "Failed to make socket non-inheritable: %s\n", 
-		  STRERROR (errno));
+		  GetLastError());
 #endif
       }
 #else
@@ -2060,7 +2059,7 @@ create_socket (int domain, int type, int protocol)
 #endif
   {
 #ifdef WINDOWS
-    SetErrnoFromWinError (GetLastError ());
+    //SetErrnoFromWinError (GetLastError ());
 #endif
     return fd; /* good luck */
   }
@@ -2076,7 +2075,7 @@ create_socket (int domain, int type, int protocol)
 #endif
   {
 #ifdef WINDOWS
-    SetErrnoFromWinError (GetLastError ());
+    //SetErrnoFromWinError (GetLastError ());
 #endif
     return fd; /* good luck */
   }
@@ -2293,7 +2292,13 @@ MHD_start_daemon_va (unsigned int options,
 	socket_fd = create_socket (PF_INET, SOCK_STREAM, 0);
       if (-1 == socket_fd)
 	{
-#if HAVE_MESSAGES
+#if HAVE_MESSAGES && WINDOWS
+    if (0 != (options & MHD_USE_DEBUG))
+
+      MHD_DLOG_WIN (daemon, 
+      "Call to socket failed: %s\n", 
+      GetLastError());
+#elif HAVE_MESSAGES
 	  if (0 != (options & MHD_USE_DEBUG))
 	    MHD_DLOG (daemon, 
 		      "Call to socket failed: %s\n", 
@@ -2835,9 +2840,6 @@ MHD_init ()
   mhd_panic = &mhd_panic_std;
   mhd_panic_cls = NULL;
 
-#ifdef WINDOWS
-  plibc_init ("GNU", "libmicrohttpd");
-#endif
 #if HTTPS_SUPPORT
   gcry_control (GCRYCTL_SET_THREAD_CBS, &gcry_threads_pthread);
   gnutls_global_init ();
@@ -2850,9 +2852,6 @@ MHD_fini ()
 {
 #if HTTPS_SUPPORT
   gnutls_global_deinit ();
-#endif
-#ifdef WINDOWS
-  plibc_shutdown ();
 #endif
 }
 

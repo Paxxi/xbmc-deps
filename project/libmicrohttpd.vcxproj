@@ -68,7 +68,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>..\include;..\libmicrohttpd;..\libmicrohttpd\src\include;..\libmicrohttpd\src\daemon;C:\Users\Public\code\xbmc-deps\plibc\src\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\include;..\libmicrohttpd;..\libmicrohttpd\src\include;..\libmicrohttpd\src\daemon;..\libmicrohttpd\src\include\plibc</AdditionalIncludeDirectories>
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
       <ProgramDataBaseFileName>$(IntDir)$(ProjectName).pdb</ProgramDataBaseFileName>
       <PreprocessorDefinitions>_WINDLL;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -110,14 +110,10 @@
     <ClInclude Include="..\libmicrohttpd\src\daemon\tsearch.h" />
     <ClInclude Include="..\libmicrohttpd\src\include\microhttpd.h" />
     <ClInclude Include="..\libmicrohttpd\src\include\platform.h" />
+    <ClInclude Include="..\libmicrohttpd\src\include\plibc\plibc.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\libmicrohttpd\src\daemon\EXPORT.sym" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="plibc.vcxproj">
-      <Project>{469ad077-06f4-4b32-9d9c-402acad14c67}</Project>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
