@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{469AD077-06F4-4B32-9D9C-402ACAD14C67}</ProjectGuid>
+    <RootNamespace>plibc</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v100</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\include;..\plibc\src\include;..\plibc\src;..\plibc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WINDOWS;_USING_V110_SDK71_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>msvcrt.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\plibc\config.h" />
+    <ClInclude Include="..\plibc\src\include\langinfo.h" />
+    <ClInclude Include="..\plibc\src\include\plibc.h" />
+    <ClInclude Include="..\plibc\src\include\plibc_private.h" />
+    <ClInclude Include="..\plibc\src\str-two-way.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\plibc\src\access.c" />
+    <ClCompile Include="..\plibc\src\atoll.c" />
+    <ClCompile Include="..\plibc\src\chdir.c" />
+    <ClCompile Include="..\plibc\src\chmod.c" />
+    <ClCompile Include="..\plibc\src\close.c" />
+    <ClCompile Include="..\plibc\src\creat.c" />
+    <ClCompile Include="..\plibc\src\ctime.c" />
+    <ClCompile Include="..\plibc\src\errno.c" />
+    <ClCompile Include="..\plibc\src\flock.c" />
+    <ClCompile Include="..\plibc\src\fopen.c" />
+    <ClCompile Include="..\plibc\src\fstat.c" />
+    <ClCompile Include="..\plibc\src\fsync.c" />
+    <ClCompile Include="..\plibc\src\fwrite.c" />
+    <ClCompile Include="..\plibc\src\gettimeofday.c" />
+    <ClCompile Include="..\plibc\src\gmtime_r.c" />
+    <ClCompile Include="..\plibc\src\hsearch.c" />
+    <ClCompile Include="..\plibc\src\hsearch_r.c" />
+    <ClCompile Include="..\plibc\src\intl.c" />
+    <ClCompile Include="..\plibc\src\kill.c" />
+    <ClCompile Include="..\plibc\src\langinfo.c" />
+    <ClCompile Include="..\plibc\src\lsearch.c" />
+    <ClCompile Include="..\plibc\src\mkstemp.c" />
+    <ClCompile Include="..\plibc\src\mmap.c" />
+    <ClCompile Include="..\plibc\src\open.c" />
+    <ClCompile Include="..\plibc\src\path.c" />
+    <ClCompile Include="..\plibc\src\pid.c" />
+    <ClCompile Include="..\plibc\src\pipe.c" />
+    <ClCompile Include="..\plibc\src\plibc.c" />
+    <ClCompile Include="..\plibc\src\printf.c" />
+    <ClCompile Include="..\plibc\src\random.c" />
+    <ClCompile Include="..\plibc\src\read.c" />
+    <ClCompile Include="..\plibc\src\readlink.c" />
+    <ClCompile Include="..\plibc\src\realpath.c" />
+    <ClCompile Include="..\plibc\src\registry.c" />
+    <ClCompile Include="..\plibc\src\remove.c" />
+    <ClCompile Include="..\plibc\src\rename.c" />
+    <ClCompile Include="..\plibc\src\rmdir.c" />
+    <ClCompile Include="..\plibc\src\select.c" />
+    <ClCompile Include="..\plibc\src\shortcut.c" />
+    <ClCompile Include="..\plibc\src\socket.c" />
+    <ClCompile Include="..\plibc\src\stat.c" />
+    <ClCompile Include="..\plibc\src\statfs.c" />
+    <ClCompile Include="..\plibc\src\strcasestr.c" />
+    <ClCompile Include="..\plibc\src\string.c" />
+    <ClCompile Include="..\plibc\src\strptime.c" />
+    <ClCompile Include="..\plibc\src\symlink.c" />
+    <ClCompile Include="..\plibc\src\sysconf.c" />
+    <ClCompile Include="..\plibc\src\truncate.c" />
+    <ClCompile Include="..\plibc\src\tsearch.c" />
+    <ClCompile Include="..\plibc\src\unlink.c" />
+    <ClCompile Include="..\plibc\src\write.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

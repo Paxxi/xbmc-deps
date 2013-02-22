@@ -93,7 +93,7 @@
 /* #undef HAVE_NETINET_TCP_H */
 
 /* Define to 1 if you have the <plibc.h> header file. */
-#define HAVE_PLIBC_H 1
+#define HAVE_PLIBC_H 0
 
 /* Define to 1 if you have the <poll.h> header file. */
 /* #undef HAVE_POLL_H */
@@ -291,6 +291,7 @@
 #define WIN32_LEAN_AND_MEAN 1
 #define snprintf _snprintf
 #define HAVE_STRNLEN 1
+#define HAVE_LISTEN_SHUTDOWN 1
 
 typedef unsigned int _mode_t;
 typedef unsigned int mode_t;

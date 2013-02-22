@@ -1,3 +1,4 @@
+#pragma once
 /*
      This file is part of PlibC.
      (C) 2005, 2006, 2007, 2008, 2009, 2010 Nils Durner (and other contributing authors)
@@ -134,22 +135,22 @@ enum
 	#define EDEADLOCK EDEADLK	/* File locking deadlock error */
 #endif
 #define EBFONT 57	/* Bad font file fmt */
-#define ENOSTR 60	/* Device not a stream */
-#define ENODATA 61	/* No data (for no delay io) */
-#define ETIME 62	/* Timer expired */
+//#define ENOSTR 60	/* Device not a stream */
+//#define ENODATA 61	/* No data (for no delay io) */
+//#define ETIME 62	/* Timer expired */
 #define ENOSR 63	/* Out of streams resources */
 #define ENONET 64	/* Machine is not on the network */
 #define ENOPKG 65	/* Package not installed */
 #define EREMOTE 66	/* The object is remote */
-#define ENOLINK 67	/* The link has been severed */
+//#define ENOLINK 67	/* The link has been severed */
 #define EADV 68		/* Advertise error */
 #define ESRMNT 69	/* Srmount error */
 #define ECOMM 70	/* Communication error on send */
-#define EPROTO 71	/* Protocol error */
+//#define EPROTO 71	/* Protocol error */
 #define EMULTIHOP 74	/* Multihop attempted */
 #define ELBIN 75	/* Inode is remote (not really error) */
 #define EDOTDOT 76	/* Cross mount point (not really error) */
-#define EBADMSG 77	/* Trying to read unreadable message */
+//#define EBADMSG 77	/* Trying to read unreadable message */
 #define ENOTUNIQ 80	/* Given log. name not unique */
 #define EBADFD 81	/* f.d. invalid for this operation */
 #define EREMCHG 82	/* Remote address changed */
@@ -226,7 +227,7 @@ enum
 #define MAP_SHARED  0x1
 #define MAP_PRIVATE 0x2 /* unsupported */
 #define MAP_FIXED   0x10
-#define MAP_ANONYMOUS 0x20 /* unsupported */
+//#define MAP_ANONYMOUS 0x20 /* unsupported */
 #define MAP_FAILED  ((void *)-1)
 
 #define MS_ASYNC        1       /* sync memory asynchronously */
@@ -634,93 +635,93 @@ char *strcasestr(const char *haystack_start, const char *needle_start);
  #define BINDTEXTDOMAIN(d, n) _win_bindtextdomain(d, n)
 #endif
  #define CREAT(p, m) _win_creat(p, m)
- #define PLIBC_CTIME(c) _win_ctime(c)
- #define CTIME_R(c, b) _win_ctime_r(c, b)
+ #define PLIBC_CTIME(c) ctime(c)
+ //#define CTIME_R(c, b) _win_ctime_r(c, b)
  #define FOPEN(f, m) _win_fopen(f, m)
  #define FCLOSE(f) _win_fclose(f)
- #define FTRUNCATE(f, l) _win_ftruncate(f, l)
+ /*#define FTRUNCATE(f, l) _win_ftruncate(f, l)
  #define OPENDIR(d) _win_opendir(d)
  #define CLOSEDIR(d) _win_closedir(d)
- #define READDIR(d) _win_readdir(d)
+ #define READDIR(d) _win_readdir(d)*/
  #define OPEN _win_open
- #define CHDIR(d) _win_chdir(d)
+ #define CHDIR(d) chdir(d)
  #define CLOSE(f) _win_close(f)
- #define PLIBC_KILL(p, s) _win_kill(p, s)
- #define LSEEK(f, o, w) _win_lseek(f, o, w)
- #define FSTAT(h, b) _win_fstat(h, b)
- #define RMDIR(f) _win_rmdir(f)
- #define ACCESS(p, m) _win_access(p, m)
- #define CHMOD(f, p) _win_chmod(f, p)
- #define PIPE(h) _win_pipe(h)
- #define RANDOM() _win_random()
- #define SRANDOM(s) _win_srandom(s)
- #define REMOVE(p) _win_remove(p)
- #define RENAME(o, n) _win_rename(o, n)
- #define STAT(p, b) _win_stat(p, b)
- #define STAT64(p, b) _win_stat64(p, b)
- #define SYSCONF(n) _win_sysconf(n)
- #define UNLINK(f) _win_unlink(f)
- #define WRITE(f, b, n) _win_write(f, b, n)
+ //#define PLIBC_KILL(p, s) _win_kill(p, s)
+ #define LSEEK(f, o, w) _lseek(f, o, w)
+ #define FSTAT(h, b) fstat(h, b)
+ #define RMDIR(f) rmdir(f)
+ #define ACCESS(p, m) access(p, m)
+ #define CHMOD(f, p) chmod(f, p)
+ #define PIPE(h) h
+ #define RANDOM() rand()
+ #define SRANDOM(s) srand(s)
+ #define REMOVE(p) remove(p)
+ #define RENAME(o, n) rename(o, n)
+ #define STAT(p, b) _stat(p, b)
+ #define STAT64(p, b) _stat64(p, b)
+ //#define SYSCONF(n) _win_sysconf(n)
+ #define UNLINK(f) unlink(f)
+ #define WRITE(f, b, n) write(f, b, n)
  #define READ(f, b, n) _win_read(f, b, n)
  #define GN_FREAD(b, s, c, f) _win_fread(b, s, c, f)
  #define GN_FWRITE(b, s, c, f) _win_fwrite(b, s, c, f)
- #define SYMLINK(a, b) _win_symlink(a, b)
+ //#define SYMLINK(a, b) _win_symlink(a, b)
  #define MMAP(s, l, p, f, d, o) _win_mmap(s, l, p, f, d, o)
- #define MKFIFO(p, m) _win_mkfifo(p, m)
- #define MSYNC(s, l, f) _win_msync(s, l, f)
+ //#define MKFIFO(p, m) _win_mkfifo(p, m)
+ //#define MSYNC(s, l, f) _win_msync(s, l, f)
  #define MUNMAP(s, l) _win_munmap(s, l)
- #define STRERROR(i) _win_strerror(i)
- #define READLINK(p, b, s) _win_readlink(p, b, s)
- #define LSTAT(p, b) _win_lstat(p, b)
- #define LSTAT64(p, b) _win_lstat64(p, b)
- #define PRINTF(f, ...) _win_printf(f , __VA_ARGS__)
- #define FPRINTF(fil, fmt, ...) _win_fprintf(fil, fmt, __VA_ARGS__)
- #define VPRINTF(f, a) _win_vprintf(f, a)
- #define VFPRINTF(s, f, a) _win_vfprintf(s, f, a)
- #define VSPRINTF(d, f, a) _win_vsprintf(d, f, a)
- #define VSNPRINTF(str, size, fmt, a) _win_vsnprintf(str, size, fmt, a)
- #define _REAL_SNPRINTF(str, size, fmt, ...) _win_snprintf(str, size, fmt, __VA_ARGS__)
- #define SPRINTF(d, f, ...) _win_sprintf(d, f, __VA_ARGS__)
- #define VSSCANF(s, f, a) _win_vsscanf(s, f, a)
- #define SSCANF(s, f, ...) _win_sscanf(s, f, __VA_ARGS__)
- #define VFSCANF(s, f, a) _win_vfscanf(s, f, a)
- #define VSCANF(f, a) _win_vscanf(f, a)
- #define SCANF(f, ...) _win_scanf(f, __VA_ARGS__)
- #define FSCANF(s, f, ...) _win_fscanf(s, f, __VA_ARGS__)
- #define WAITPID(p, s, o) _win_waitpid(p, s, o)
- #define ACCEPT(s, a, l) _win_accept(s, a, l)
- #define BIND(s, n, l) _win_bind(s, n, l)
- #define CONNECT(s, n, l) _win_connect(s, n, l)
- #define GETPEERNAME(s, n, l) _win_getpeername(s, n, l)
- #define GETSOCKNAME(s, n, l) _win_getsockname(s, n, l)
- #define GETSOCKOPT(s, l, o, v, p) _win_getsockopt(s, l, o, v, p)
- #define LISTEN(s, b) _win_listen(s, b)
- #define RECV(s, b, l, f) _win_recv(s, b, l, f)
- #define RECVFROM(s, b, l, f, r, o) _win_recvfrom(s, b, l, f, r, o)
- #define SELECT(n, r, w, e, t) _win_select(n, r, w, e, t)
- #define SEND(s, b, l, f) _win_send(s, b, l, f)
- #define SENDTO(s, b, l, f, o, n) _win_sendto(s, b, l, f, o, n)
- #define SETSOCKOPT(s, l, o, v, n) _win_setsockopt(s, l, o, v, n)
- #define SHUTDOWN(s, h) _win_shutdown(s, h)
- #define SOCKET(a, t, p) _win_socket(a, t, p)
- #define GETHOSTBYADDR(a, l, t) _win_gethostbyname(a, l, t)
- #define GETHOSTBYNAME(n) _win_gethostbyname(n)
- #define GETTIMEOFDAY(t, n) _win_gettimeofday(t, n)
- #define INSQUE(e, p) _win_insque(e, p)
- #define REMQUE(e) _win_remque(e)
- #define HSEARCH(i, a) _win_hsearch(i, a)
- #define HCREATE(n) _win_hcreate(n)
- #define HDESTROY() _win_hdestroy()
- #define HSEARCH_R(i, a, r, h) _win_hsearch_r(i, a, r, h)
- #define HCREATE_R(n, h) _win_hcreate_r(n, h)
- #define HDESTROY_R(h) _win_hdestroy_r(h)
- #define TSEARCH(k, r, c) _win_tsearch(k, r, c)
- #define TFIND(k, r, c) _win_tfind(k, r, c)
- #define TDELETE(k, r, c) _win_tdelete(k, r, c)
- #define TWALK(r, a) _win_twalk(r, a)
- #define TDESTROY(r, f) _win_tdestroy(r, f)
- #define LFIND(k, b, n, s, c) _win_lfind(k, b, n, s, c)
- #define LSEARCH(k, b, n, s, c) _win_lsearch(k, b, n, s, c)
+ #define STRERROR(i) strerror(i)
+ //#define READLINK(p, b, s) _win_readlink(p, b, s)
+ //#define LSTAT(p, b) _win_lstat(p, b)
+ //#define LSTAT64(p, b) _win_lstat64(p, b)
+ #define PRINTF(f, ...) printf(f , __VA_ARGS__)
+ #define FPRINTF(fil, fmt, ...) fprintf(fil, fmt, __VA_ARGS__)
+ #define VPRINTF(f, a) vprintf(f, a)
+ #define VFPRINTF(s, f, a) vfprintf(s, f, a)
+ #define VSPRINTF(d, f, a) vsprintf(d, f, a)
+ #define VSNPRINTF(str, size, fmt, a) vsnprintf(str, size, fmt, a)
+ #define _REAL_SNPRINTF(str, size, fmt, ...) snprintf(str, size, fmt, __VA_ARGS__)
+ #define SPRINTF(d, f, ...) sprintf(d, f, __VA_ARGS__)
+ //#define VSSCANF(s, f, a) _win_vsscanf(s, f, a)
+ #define SSCANF(s, f, ...) sscanf(s, f, __VA_ARGS__)
+ //#define VFSCANF(s, f, a) _win_vfscanf(s, f, a)
+ //#define VSCANF(f, a) _win_vscanf(f, a)
+ #define SCANF(f, ...) scanf(f, __VA_ARGS__)
+ #define FSCANF(s, f, ...) fscanf(s, f, __VA_ARGS__)
+ //#define WAITPID(p, s, o) _win_waitpid(p, s, o)
+ #define ACCEPT(s, a, l) accept(s, a, l)
+ #define BIND(s, n, l) bind(s, n, l)
+ #define CONNECT(s, n, l) connect(s, n, l)
+ #define GETPEERNAME(s, n, l) getpeername(s, n, l)
+ #define GETSOCKNAME(s, n, l) getsockname(s, n, l)
+ #define GETSOCKOPT(s, l, o, v, p) getsockopt(s, l, o, v, p)
+ #define LISTEN(s, b) listen(s, b)
+ #define RECV(s, b, l, f) recv(s, b, l, f)
+ #define RECVFROM(s, b, l, f, r, o) recvfrom(s, b, l, f, r, o)
+ #define SELECT(n, r, w, e, t) select(n, r, w, e, t)
+ #define SEND(s, b, l, f) send(s, b, l, f)
+ #define SENDTO(s, b, l, f, o, n) sendto(s, b, l, f, o, n)
+ #define SETSOCKOPT(s, l, o, v, n) setsockopt(s, l, o, v, n)
+ #define SHUTDOWN(s, h) shutdown(s, h)
+ #define SOCKET(a, t, p) socket(a, t, p)
+ #define GETHOSTBYADDR(a, l, t) gethostbyname(a, l, t)
+ #define GETHOSTBYNAME(n) gethostbyname(n)
+ //#define GETTIMEOFDAY(t, n) _win_gettimeofday(t, n)
+ //#define INSQUE(e, p) _win_insque(e, p)
+ //#define REMQUE(e) _win_remque(e)
+ //#define HSEARCH(i, a) _win_hsearch(i, a)
+ //#define HCREATE(n) _win_hcreate(n)
+ //#define HDESTROY() _win_hdestroy()
+ //#define HSEARCH_R(i, a, r, h) _win_hsearch_r(i, a, r, h)
+ //#define HCREATE_R(n, h) _win_hcreate_r(n, h)
+ //#define HDESTROY_R(h) _win_hdestroy_r(h)
+ #define TSEARCH(k, r, c) tsearch(k, r, c)
+ #define TFIND(k, r, c) tfind(k, r, c)
+ #define TDELETE(k, r, c) tdelete(k, r, c)
+ #define TWALK(r, a) twalk(r, a)
+ #define TDESTROY(r, f) tdestroy(r, f)
+ //#define LFIND(k, b, n, s, c) _win_lfind(k, b, n, s, c)
+ //#define LSEARCH(k, b, n, s, c) _win_lsearch(k, b, n, s, c)
 #endif
 
 /* search.h */

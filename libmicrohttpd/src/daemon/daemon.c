@@ -922,7 +922,7 @@ MHD_add_connection (struct MHD_Daemon *daemon,
                 "Server reached connection limit (closing inbound connection)\n");
 #endif
       SHUTDOWN (client_socket, SHUT_RDWR);
-      CLOSE (client_socket);
+      closesocket (client_socket);
       return MHD_NO;
     }
 
@@ -937,7 +937,7 @@ MHD_add_connection (struct MHD_Daemon *daemon,
 #endif
 #endif
       SHUTDOWN (client_socket, SHUT_RDWR);
-      CLOSE (client_socket);
+      closesocket (client_socket);
       MHD_ip_limit_del (daemon, addr, addrlen);
       return MHD_YES;
     }
@@ -960,7 +960,7 @@ MHD_add_connection (struct MHD_Daemon *daemon,
 		STRERROR (errno));
 #endif
       SHUTDOWN (client_socket, SHUT_RDWR);
-      CLOSE (client_socket);
+      closesocket (client_socket);
       MHD_ip_limit_del (daemon, addr, addrlen);
       return MHD_NO;
     }
@@ -975,7 +975,7 @@ MHD_add_connection (struct MHD_Daemon *daemon,
 		STRERROR (errno));
 #endif
       SHUTDOWN (client_socket, SHUT_RDWR);
-      CLOSE (client_socket);
+      closesocket (client_socket);
       MHD_ip_limit_del (daemon, addr, addrlen);
       free (connection);
       return MHD_NO;
@@ -1093,7 +1093,7 @@ MHD_add_connection (struct MHD_Daemon *daemon,
                     STRERROR (res_thread_create));
 #endif
           SHUTDOWN (client_socket, SHUT_RDWR);
-          CLOSE (client_socket);
+          closesocket (client_socket);
           MHD_ip_limit_del (daemon, addr, addrlen);
 	  if (0 != pthread_mutex_lock(&daemon->cleanup_connection_mutex))
 	    {
@@ -1164,7 +1164,7 @@ MHD_accept_connection (struct MHD_Daemon *daemon)
       if (-1 != s)
         {
           SHUTDOWN (s, SHUT_RDWR);
-          CLOSE (s);
+          closesocket (s);
           /* just in case */
         }
       return MHD_NO;
@@ -1252,7 +1252,7 @@ MHD_cleanup_connections (struct MHD_Daemon *daemon)
 	  pos->response = NULL;
 	}
       if (-1 != pos->socket_fd)
-	CLOSE (pos->socket_fd);
+	closesocket (pos->socket_fd);
       if (NULL != pos->addr)
 	free (pos->addr);
       free (pos);
@@ -2378,7 +2378,7 @@ MHD_start_daemon_va (unsigned int options,
 		      (unsigned int) port, 
 		      STRERROR (errno));
 #endif
-	  CLOSE (socket_fd);
+	  closesocket (socket_fd);
 	  goto free_and_fail;
 	}
       
@@ -2390,7 +2390,7 @@ MHD_start_daemon_va (unsigned int options,
 		      "Failed to listen for connections: %s\n", 
 		      STRERROR (errno));
 #endif
-	  CLOSE (socket_fd);
+	  closesocket (socket_fd);
 	  goto free_and_fail;
 	}      
     }
@@ -2421,7 +2421,7 @@ MHD_start_daemon_va (unsigned int options,
                "MHD failed to initialize IP connection limit mutex\n");
 #endif
       if (-1 != socket_fd)
-	CLOSE (socket_fd);
+	closesocket (socket_fd);
       goto free_and_fail;
     }
   if (0 != pthread_mutex_init (&daemon->cleanup_connection_mutex, NULL))
@@ -2432,7 +2432,7 @@ MHD_start_daemon_va (unsigned int options,
 #endif
       pthread_mutex_destroy (&daemon->cleanup_connection_mutex);
       if (-1 != socket_fd)
-	CLOSE (socket_fd);
+	closesocket (socket_fd);
       goto free_and_fail;
     }
 
@@ -2466,7 +2466,7 @@ MHD_start_daemon_va (unsigned int options,
       pthread_mutex_destroy (&daemon->cleanup_connection_mutex);
       pthread_mutex_destroy (&daemon->per_ip_connection_mutex);
       if (-1 != socket_fd)
-	CLOSE (socket_fd);
+	closesocket (socket_fd);
       goto free_and_fail;
     }
   if ( (daemon->worker_pool_size > 0) &&
@@ -2560,7 +2560,7 @@ thread_failed:
   if (0 == i)
     {
       if (-1 != socket_fd)
-	CLOSE (socket_fd);
+	closesocket (socket_fd);
       pthread_mutex_destroy (&daemon->cleanup_connection_mutex);
       pthread_mutex_destroy (&daemon->per_ip_connection_mutex);
       if (NULL != daemon->worker_pool)
@@ -2725,7 +2725,7 @@ MHD_stop_daemon (struct MHD_Daemon *daemon)
     }
   close_all_connections (daemon);
   if (-1 != fd)
-    CLOSE (fd);
+    closesocket (fd);
 
   /* TLS clean up */
 #if HTTPS_SUPPORT
