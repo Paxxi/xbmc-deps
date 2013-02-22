@@ -619,7 +619,7 @@ char *strcasestr(const char *haystack_start, const char *needle_start);
  #define MKFIFO(p, m) _win_mkfifo(p, m)
  #define MSYNC(s, l, f) _win_msync(s, l, f)
  #define MUNMAP(s, l) _win_munmap(s, l)
- #define STRERROR(i) _win_strerror(i)
+ #define STRERROR(i) strerror(i)
  #define READLINK(p, b, s) _win_readlink(p, b, s)
  #define LSTAT(p, b) _win_lstat(p, b)
  #define LSTAT64(p, b) _win_lstat64(p, b)

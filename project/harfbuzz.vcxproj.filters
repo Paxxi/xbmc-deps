@@ -48,9 +48,6 @@
     <ClCompile Include="..\harfbuzz\src\hb-ot-shape-complex-indic.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\harfbuzz\src\hb-ot-shape-complex-misc.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\harfbuzz\src\hb-ot-shape-fallback.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
