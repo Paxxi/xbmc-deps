@@ -87,6 +87,49 @@
 #define SOCK_CLOEXEC 0
 #endif
 
+int MHD_win_pipe(int pipefd[2])
+{
+  struct sockaddr_in inaddr;
+  struct sockaddr addr;
+  SOCKET lst;
+  SOCKET snd;
+  int yes = 1;
+  int len;
+  lst = socket(AF_INET, SOCK_STREAM,IPPROTO_TCP);
+  memset(&inaddr, 0, sizeof(inaddr));
+  memset(&addr, 0, sizeof(addr));
+  inaddr.sin_family = AF_INET;
+  inaddr.sin_addr.s_addr = htonl(INADDR_LOOPBACK);
+  inaddr.sin_port = 0;
+
+  if (0 != setsockopt(lst,SOL_SOCKET,SO_REUSEADDR,(char*)&yes,sizeof(yes)))
+    return -1;
+
+  if (0 != bind(lst,(struct sockaddr *)&inaddr,sizeof(inaddr)))
+    return -1;
+
+  if (0 != listen(lst,1))
+    return -1;
+
+  len=sizeof(inaddr);
+  if (0 != getsockname(lst, &addr,&len))
+  {
+    closesocket(lst);
+    return -1;
+  }
+  pipefd[1] = socket(AF_INET, SOCK_STREAM,0);
+  if(0 != connect(pipefd[1],&addr,len))
+  {
+    closesocket(lst);
+    closesocket(pipefd[1]);
+    return -1;
+  }
+  pipefd[0]=accept(lst,0,0);
+  closesocket(lst);
+  
+  return 0;
+}
+
 
 /**
  * Default implementation of the panic function,
@@ -550,6 +593,7 @@ MHD_get_fdset (struct MHD_Daemon *daemon,
   if (-1 != fd)
   {
     FD_SET (fd, read_fd_set);
+    FD_SET (fd, except_fd_set);
     /* update max file descriptor */
     if ((*max_fd) < fd) 
       *max_fd = fd;
@@ -2684,7 +2728,7 @@ MHD_stop_daemon (struct MHD_Daemon *daemon)
     }
   if (-1 != daemon->wpipe[1])
     {
-      if (1 != WRITE (daemon->wpipe[1], "e", 1))
+      if (1 != SEND (daemon->wpipe[1], "e", 1, 0))
 	MHD_PANIC ("failed to signal shutdownn via pipe");
     }
 #ifdef HAVE_LISTEN_SHUTDOWN

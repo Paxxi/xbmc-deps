@@ -291,7 +291,6 @@
 #define WIN32_LEAN_AND_MEAN 1
 #define snprintf _snprintf
 #define HAVE_STRNLEN 1
-#define HAVE_LISTEN_SHUTDOWN 1
 
 typedef unsigned int _mode_t;
 typedef unsigned int mode_t;

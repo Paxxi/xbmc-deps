@@ -71,10 +71,11 @@ extern "C" {
 
 #define CREAT(p, m) _creat(p, m)
 #define OPEN _open
-#define CLOSE(f) _close(f)
+//microhttpd aren't using any file handles so set this to closesocket
+#define CLOSE(f) closesocket(f)
 #define LSEEK(f, o, w) _lseek(f, o, w)
 #define ACCESS(p, m) access(p, m)
-#define PIPE(h) h
+#define PIPE(h) MHD_win_pipe(h)
 #define RANDOM() rand()
 #define SRANDOM(s) srand(s)
 #define STAT(p, b) _stat(p, b)
