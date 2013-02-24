@@ -593,7 +593,6 @@ MHD_get_fdset (struct MHD_Daemon *daemon,
   if (-1 != fd)
   {
     FD_SET (fd, read_fd_set);
-    FD_SET (fd, except_fd_set);
     /* update max file descriptor */
     if ((*max_fd) < fd) 
       *max_fd = fd;
@@ -966,7 +965,7 @@ MHD_add_connection (struct MHD_Daemon *daemon,
                 "Server reached connection limit (closing inbound connection)\n");
 #endif
       SHUTDOWN (client_socket, SHUT_RDWR);
-      closesocket (client_socket);
+      CLOSE (client_socket);
       return MHD_NO;
     }
 
@@ -981,7 +980,7 @@ MHD_add_connection (struct MHD_Daemon *daemon,
 #endif
 #endif
       SHUTDOWN (client_socket, SHUT_RDWR);
-      closesocket (client_socket);
+      CLOSE (client_socket);
       MHD_ip_limit_del (daemon, addr, addrlen);
       return MHD_YES;
     }
@@ -1004,7 +1003,7 @@ MHD_add_connection (struct MHD_Daemon *daemon,
 		STRERROR (errno));
 #endif
       SHUTDOWN (client_socket, SHUT_RDWR);
-      closesocket (client_socket);
+      CLOSE (client_socket);
       MHD_ip_limit_del (daemon, addr, addrlen);
       return MHD_NO;
     }
@@ -1019,7 +1018,7 @@ MHD_add_connection (struct MHD_Daemon *daemon,
 		STRERROR (errno));
 #endif
       SHUTDOWN (client_socket, SHUT_RDWR);
-      closesocket (client_socket);
+      CLOSE (client_socket);
       MHD_ip_limit_del (daemon, addr, addrlen);
       free (connection);
       return MHD_NO;
@@ -1137,7 +1136,7 @@ MHD_add_connection (struct MHD_Daemon *daemon,
                     STRERROR (res_thread_create));
 #endif
           SHUTDOWN (client_socket, SHUT_RDWR);
-          closesocket (client_socket);
+          CLOSE (client_socket);
           MHD_ip_limit_del (daemon, addr, addrlen);
 	  if (0 != pthread_mutex_lock(&daemon->cleanup_connection_mutex))
 	    {
@@ -1208,7 +1207,7 @@ MHD_accept_connection (struct MHD_Daemon *daemon)
       if (-1 != s)
         {
           SHUTDOWN (s, SHUT_RDWR);
-          closesocket (s);
+          CLOSE (s);
           /* just in case */
         }
       return MHD_NO;
@@ -1295,7 +1294,7 @@ MHD_cleanup_connections (struct MHD_Daemon *daemon)
 	  pos->response = NULL;
 	}
       if (-1 != pos->socket_fd)
-	closesocket (pos->socket_fd);
+	CLOSE (pos->socket_fd);
       if (NULL != pos->addr)
 	free (pos->addr);
       free (pos);
@@ -2084,11 +2083,11 @@ create_socket (int domain, int type, int protocol)
  
   /* use SOCK_STREAM rather than ai_socktype: some getaddrinfo
    * implementations do not set ai_socktype, e.g. RHL6.2. */
-  fd = socket (domain, ctype, protocol);
+  fd = SOCKET (domain, ctype, protocol);
   if ( (-1 == fd) && (EINVAL == errno) && (0 != sock_cloexec) )
   {
     sock_cloexec = 0;
-    fd = socket(domain, type, protocol);
+    fd = SOCKET(domain, type, protocol);
   }
   if (-1 == fd)
     return -1;
