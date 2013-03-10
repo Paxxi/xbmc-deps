@@ -170,3 +170,6 @@ config.status
 stamp-h1
 libmicrohttpd.pc
 libtool
+project/Release x64
+project/x64
+project/deps
