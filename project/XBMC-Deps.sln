@@ -25,6 +25,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libmicrohttpd", "libmicroht
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "plibc", "plibc.vcxproj", "{469AD077-06F4-4B32-9D9C-402ACAD14C67}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zlib1_dll", "zlib1_dll.vcxproj", "{107201DE-CAA6-4828-94D3-21385B2511DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -141,6 +143,18 @@ Global
 		{469AD077-06F4-4B32-9D9C-402ACAD14C67}.Release|Win32.Build.0 = Release|Win32
 		{469AD077-06F4-4B32-9D9C-402ACAD14C67}.Release|x64.ActiveCfg = Release|x64
 		{469AD077-06F4-4B32-9D9C-402ACAD14C67}.Release|x64.Build.0 = Release|x64
+		{107201DE-CAA6-4828-94D3-21385B2511DE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{107201DE-CAA6-4828-94D3-21385B2511DE}.Debug|Win32.Build.0 = Debug|Win32
+		{107201DE-CAA6-4828-94D3-21385B2511DE}.Debug|x64.ActiveCfg = Debug|x64
+		{107201DE-CAA6-4828-94D3-21385B2511DE}.Debug|x64.Build.0 = Debug|x64
+		{107201DE-CAA6-4828-94D3-21385B2511DE}.Release x64|Win32.ActiveCfg = Release x64|Win32
+		{107201DE-CAA6-4828-94D3-21385B2511DE}.Release x64|Win32.Build.0 = Release x64|Win32
+		{107201DE-CAA6-4828-94D3-21385B2511DE}.Release x64|x64.ActiveCfg = Release x64|x64
+		{107201DE-CAA6-4828-94D3-21385B2511DE}.Release x64|x64.Build.0 = Release x64|x64
+		{107201DE-CAA6-4828-94D3-21385B2511DE}.Release|Win32.ActiveCfg = Release|Win32
+		{107201DE-CAA6-4828-94D3-21385B2511DE}.Release|Win32.Build.0 = Release|Win32
+		{107201DE-CAA6-4828-94D3-21385B2511DE}.Release|x64.ActiveCfg = Release|x64
+		{107201DE-CAA6-4828-94D3-21385B2511DE}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
