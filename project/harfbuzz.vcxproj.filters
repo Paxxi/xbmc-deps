@@ -81,6 +81,12 @@
     <ClCompile Include="..\harfbuzz\src\hb-warning.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\harfbuzz\src\hb-ot-shape-complex-thai.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\harfbuzz\src\hb-ot-shape-complex-default.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\harfbuzz\src\hb.h">

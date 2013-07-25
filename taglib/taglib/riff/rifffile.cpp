@@ -30,6 +30,10 @@
 #include "rifffile.h"
 #include <vector>
 
+#if _MSC_VER > 1700
+#include <algorithm>
+#endif
+
 using namespace TagLib;
 
 struct Chunk
