@@ -262,6 +262,7 @@
     <ClInclude Include="..\taglib\taglib\s3m\s3mfile.h" />
     <ClInclude Include="..\taglib\taglib\s3m\s3mproperties.h" />
     <ClInclude Include="..\taglib\taglib\tag.h" />
+    <ClInclude Include="..\taglib\taglib\taglib_config.h" />
     <ClInclude Include="..\taglib\taglib\taglib_export.h" />
     <ClInclude Include="..\taglib\taglib\tagunion.h" />
     <ClInclude Include="..\taglib\taglib\toolkit\taglib.h" />

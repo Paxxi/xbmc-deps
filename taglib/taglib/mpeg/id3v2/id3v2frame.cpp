@@ -134,7 +134,7 @@ Frame *Frame::createTextualFrame(const String &key, const StringList &values) //
   // now we check if it's one of the "special" cases:
   // -LYRICS: depending on the number of values, use USLT or TXXX (with description=LYRICS)
   if((key == "LYRICS" || key.startsWith(lyricsPrefix)) && values.size() == 1){
-    UnsynchronizedLyricsFrame *frame = new UnsynchronizedLyricsFrame();
+    UnsynchronizedLyricsFrame *frame = new UnsynchronizedLyricsFrame(String::UTF8);
     frame->setDescription(key == "LYRICS" ? key : key.substr(lyricsPrefix.size()));
     frame->setText(values.front());
     return frame;
@@ -392,7 +392,7 @@ static const char *frameTranslation[][2] = {
   //{ "USLT", "LYRICS" }, handled specially
 };
 
-static const TagLib::uint txxxFrameTranslationSize = 7;
+static const TagLib::uint txxxFrameTranslationSize = 8;
 static const char *txxxFrameTranslation[][2] = {
   { "MusicBrainz Album Id", "MUSICBRAINZ_ALBUMID" },
   { "MusicBrainz Artist Id", "MUSICBRAINZ_ARTISTID" },
@@ -642,7 +642,7 @@ void Frame::Header::setData(const ByteVector &data, uint version)
       return;
     }
 
-    d->frameSize = data.mid(3, 3).toUInt();
+    d->frameSize = data.toUInt(3, 3, true);
 
     break;
   }
@@ -670,7 +670,7 @@ void Frame::Header::setData(const ByteVector &data, uint version)
     // Set the size -- the frame size is the four bytes starting at byte four in
     // the frame header (structure 4)
 
-    d->frameSize = data.mid(4, 4).toUInt();
+    d->frameSize = data.toUInt(4U);
 
     { // read the first byte of flags
       std::bitset<8> flags(data[8]);
@@ -717,7 +717,7 @@ void Frame::Header::setData(const ByteVector &data, uint version)
     // iTunes writes v2.4 tags with v2.3-like frame sizes
     if(d->frameSize > 127) {
       if(!isValidFrameID(data.mid(d->frameSize + 10, 4))) {
-        unsigned int uintSize = data.mid(4, 4).toUInt();
+        unsigned int uintSize = data.toUInt(4U);
         if(isValidFrameID(data.mid(uintSize + 10, 4))) {
           d->frameSize = uintSize;
         }

@@ -596,5 +596,8 @@
     <ClInclude Include="..\taglib\taglib\trueaudio\trueaudioproperties.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\taglib\taglib\taglib_config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
