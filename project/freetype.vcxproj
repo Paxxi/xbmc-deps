@@ -103,6 +103,7 @@
     <ClCompile Include="..\freetype\src\autofit\autofit.c" />
     <ClCompile Include="..\freetype\src\base\ftbase.c" />
     <ClCompile Include="..\freetype\src\base\ftbbox.c" />
+    <ClCompile Include="..\freetype\src\base\ftbdf.c" />
     <ClCompile Include="..\freetype\src\base\ftbitmap.c" />
     <ClCompile Include="..\freetype\src\base\ftdebug.c" />
     <ClCompile Include="..\freetype\src\base\ftfstype.c" />

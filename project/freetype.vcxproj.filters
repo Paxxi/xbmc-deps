@@ -158,5 +158,8 @@
     <ClCompile Include="..\freetype\src\cid\type1cid.c">
       <Filter>Source Files\FT_MODULES</Filter>
     </ClCompile>
+    <ClCompile Include="..\freetype\src\base\ftbdf.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

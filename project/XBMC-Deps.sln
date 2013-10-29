@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.20617.1 PREVIEW
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "taglib", "taglib.vcxproj", "{DAE7A9E7-8AB2-4A57-AFA0-115652863933}"
 EndProject
@@ -17,6 +17,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "harfbuzz", "harfbuzz.vcxpro
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "freetype", "freetype.vcxproj", "{6CE2A082-6049-4789-BD94-8A03E7ACD8A5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7241A9C8-BD34-4103-8D51-A2EA194503C6} = {7241A9C8-BD34-4103-8D51-A2EA194503C6}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "bzip2", "bzip2.vcxproj", "{1A9C1915-EEAE-40C7-902C-49CB3526F0BE}"
 EndProject
@@ -26,6 +29,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libmicrohttpd", "libmicroht
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "plibc", "plibc.vcxproj", "{469AD077-06F4-4B32-9D9C-402ACAD14C67}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "fontconfig", "fontconfig.vcxproj", "{EF852CD4-5D49-4ADA-B3E7-3B87DA7A1E71}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6CE2A082-6049-4789-BD94-8A03E7ACD8A5} = {6CE2A082-6049-4789-BD94-8A03E7ACD8A5}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,6 +73,10 @@ Global
 		{D9B23C24-1AFF-403F-ADD9-F084EE9044E3}.Release|Win32.ActiveCfg = Release|Win32
 		{469AD077-06F4-4B32-9D9C-402ACAD14C67}.Debug|Win32.ActiveCfg = Debug|Win32
 		{469AD077-06F4-4B32-9D9C-402ACAD14C67}.Release|Win32.ActiveCfg = Release|Win32
+		{EF852CD4-5D49-4ADA-B3E7-3B87DA7A1E71}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EF852CD4-5D49-4ADA-B3E7-3B87DA7A1E71}.Debug|Win32.Build.0 = Debug|Win32
+		{EF852CD4-5D49-4ADA-B3E7-3B87DA7A1E71}.Release|Win32.ActiveCfg = Release|Win32
+		{EF852CD4-5D49-4ADA-B3E7-3B87DA7A1E71}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
