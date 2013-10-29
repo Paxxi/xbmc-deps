@@ -33,7 +33,10 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "fontconfig", "fontconfig.vcxproj", "{EF852CD4-5D49-4ADA-B3E7-3B87DA7A1E71}"
 	ProjectSection(ProjectDependencies) = postProject
 		{6CE2A082-6049-4789-BD94-8A03E7ACD8A5} = {6CE2A082-6049-4789-BD94-8A03E7ACD8A5}
+		{24D9A8EF-CB41-4139-B231-26EB7D2529E4} = {24D9A8EF-CB41-4139-B231-26EB7D2529E4}
 	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "expat", "expat.vcxproj", "{24D9A8EF-CB41-4139-B231-26EB7D2529E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -77,6 +80,10 @@ Global
 		{EF852CD4-5D49-4ADA-B3E7-3B87DA7A1E71}.Debug|Win32.Build.0 = Debug|Win32
 		{EF852CD4-5D49-4ADA-B3E7-3B87DA7A1E71}.Release|Win32.ActiveCfg = Release|Win32
 		{EF852CD4-5D49-4ADA-B3E7-3B87DA7A1E71}.Release|Win32.Build.0 = Release|Win32
+		{24D9A8EF-CB41-4139-B231-26EB7D2529E4}.Debug|Win32.ActiveCfg = Debug|Win32
+		{24D9A8EF-CB41-4139-B231-26EB7D2529E4}.Debug|Win32.Build.0 = Debug|Win32
+		{24D9A8EF-CB41-4139-B231-26EB7D2529E4}.Release|Win32.ActiveCfg = Release|Win32
+		{24D9A8EF-CB41-4139-B231-26EB7D2529E4}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
