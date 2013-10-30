@@ -90,7 +90,7 @@
     <OutDir>$(SolutionDir)deps\$(Configuration)\</OutDir>
     <IntDir>$(Configuration)\$(ProjectName)\</IntDir>
     <TargetName>libfontconfig-1</TargetName>
-    <TargetExt>dll</TargetExt>
+    <TargetExt>.dll</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <IntDir>$(Configuration)\$(ProjectName)\</IntDir>

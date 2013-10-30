@@ -42,6 +42,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pcre", "pcre.vcxproj", "{19
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pcrecpp", "pcrecpp.vcxproj", "{2E67F000-F0FB-433C-A387-20D725BDC934}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "liblzo2", "liblzo2.vcxproj", "{EF0561CF-2E7C-4ECD-BAEE-04BC46A47587}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -96,6 +98,10 @@ Global
 		{2E67F000-F0FB-433C-A387-20D725BDC934}.Debug|Win32.Build.0 = Debug|Win32
 		{2E67F000-F0FB-433C-A387-20D725BDC934}.Release|Win32.ActiveCfg = Release|Win32
 		{2E67F000-F0FB-433C-A387-20D725BDC934}.Release|Win32.Build.0 = Release|Win32
+		{EF0561CF-2E7C-4ECD-BAEE-04BC46A47587}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EF0561CF-2E7C-4ECD-BAEE-04BC46A47587}.Debug|Win32.Build.0 = Debug|Win32
+		{EF0561CF-2E7C-4ECD-BAEE-04BC46A47587}.Release|Win32.ActiveCfg = Release|Win32
+		{EF0561CF-2E7C-4ECD-BAEE-04BC46A47587}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

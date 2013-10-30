@@ -59,7 +59,7 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <DisableLanguageExtensions>true</DisableLanguageExtensions>
       <DisableSpecificWarnings>4001</DisableSpecificWarnings>
-      <ProgramDataBaseFileName>$(SolutionDir)deps\$(Configuration)\$(ProjectName)-vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName)-vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -79,7 +79,7 @@
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <DisableLanguageExtensions>true</DisableLanguageExtensions>
       <DisableSpecificWarnings>4001</DisableSpecificWarnings>
-      <ProgramDataBaseFileName>$(IntDir)$(ProjectName).pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName)-vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>

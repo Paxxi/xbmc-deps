@@ -13,3 +13,4 @@ zlib version 1.2.7
 fontconfig version 2.11.0
 expat version 2.1.0
 pcre version 8.33
+liblzo version 2.0.6
