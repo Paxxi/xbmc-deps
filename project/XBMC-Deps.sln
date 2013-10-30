@@ -44,6 +44,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pcrecpp", "pcrecpp.vcxproj"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "liblzo2", "liblzo2.vcxproj", "{EF0561CF-2E7C-4ECD-BAEE-04BC46A47587}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "yajl", "yajl.vcxproj", "{04B9E16F-A35C-4AEB-B5E2-A82995F336EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -102,6 +104,10 @@ Global
 		{EF0561CF-2E7C-4ECD-BAEE-04BC46A47587}.Debug|Win32.Build.0 = Debug|Win32
 		{EF0561CF-2E7C-4ECD-BAEE-04BC46A47587}.Release|Win32.ActiveCfg = Release|Win32
 		{EF0561CF-2E7C-4ECD-BAEE-04BC46A47587}.Release|Win32.Build.0 = Release|Win32
+		{04B9E16F-A35C-4AEB-B5E2-A82995F336EC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{04B9E16F-A35C-4AEB-B5E2-A82995F336EC}.Debug|Win32.Build.0 = Debug|Win32
+		{04B9E16F-A35C-4AEB-B5E2-A82995F336EC}.Release|Win32.ActiveCfg = Release|Win32
+		{04B9E16F-A35C-4AEB-B5E2-A82995F336EC}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
