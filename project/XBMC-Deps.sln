@@ -38,6 +38,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "fontconfig", "fontconfig.vc
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "expat", "expat.vcxproj", "{24D9A8EF-CB41-4139-B231-26EB7D2529E4}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pcre", "pcre.vcxproj", "{19318801-90E9-4354-A636-EDC50A833A03}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pcrecpp", "pcrecpp.vcxproj", "{2E67F000-F0FB-433C-A387-20D725BDC934}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -84,6 +88,14 @@ Global
 		{24D9A8EF-CB41-4139-B231-26EB7D2529E4}.Debug|Win32.Build.0 = Debug|Win32
 		{24D9A8EF-CB41-4139-B231-26EB7D2529E4}.Release|Win32.ActiveCfg = Release|Win32
 		{24D9A8EF-CB41-4139-B231-26EB7D2529E4}.Release|Win32.Build.0 = Release|Win32
+		{19318801-90E9-4354-A636-EDC50A833A03}.Debug|Win32.ActiveCfg = Debug|Win32
+		{19318801-90E9-4354-A636-EDC50A833A03}.Debug|Win32.Build.0 = Debug|Win32
+		{19318801-90E9-4354-A636-EDC50A833A03}.Release|Win32.ActiveCfg = Release|Win32
+		{19318801-90E9-4354-A636-EDC50A833A03}.Release|Win32.Build.0 = Release|Win32
+		{2E67F000-F0FB-433C-A387-20D725BDC934}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2E67F000-F0FB-433C-A387-20D725BDC934}.Debug|Win32.Build.0 = Debug|Win32
+		{2E67F000-F0FB-433C-A387-20D725BDC934}.Release|Win32.ActiveCfg = Release|Win32
+		{2E67F000-F0FB-433C-A387-20D725BDC934}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
