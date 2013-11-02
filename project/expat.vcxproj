@@ -92,6 +92,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ModuleDefinitionFile>..\expat\lib\libexpat.def</ModuleDefinitionFile>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName)-vc$(PlatformToolsetVersion).pdb</ProgramDatabaseFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -111,6 +112,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <ModuleDefinitionFile>..\expat\lib\libexpat.def</ModuleDefinitionFile>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName)-vc$(PlatformToolsetVersion).pdb</ProgramDatabaseFile>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
