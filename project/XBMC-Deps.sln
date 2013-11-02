@@ -50,6 +50,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "fribidi", "fribidi.vcxproj"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sqlite3", "sqlite3.vcxproj", "{73C71BCE-520D-44F8-B373-170EE5841B27}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dnssd", "dnssd.vcxproj", "{54212C81-C78E-43E8-8D85-E64197BA0123}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -120,6 +122,10 @@ Global
 		{73C71BCE-520D-44F8-B373-170EE5841B27}.Debug|Win32.Build.0 = Debug|Win32
 		{73C71BCE-520D-44F8-B373-170EE5841B27}.Release|Win32.ActiveCfg = Release|Win32
 		{73C71BCE-520D-44F8-B373-170EE5841B27}.Release|Win32.Build.0 = Release|Win32
+		{54212C81-C78E-43E8-8D85-E64197BA0123}.Debug|Win32.ActiveCfg = Debug|Win32
+		{54212C81-C78E-43E8-8D85-E64197BA0123}.Debug|Win32.Build.0 = Debug|Win32
+		{54212C81-C78E-43E8-8D85-E64197BA0123}.Release|Win32.ActiveCfg = Release|Win32
+		{54212C81-C78E-43E8-8D85-E64197BA0123}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

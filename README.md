@@ -41,3 +41,4 @@ Versions
 - yajl version 2.0.1
 - fribidi version 0.19.5
 - sqlite3 version 3.8.1
+- dnssd version 333.10
