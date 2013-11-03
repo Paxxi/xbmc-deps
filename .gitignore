@@ -170,3 +170,4 @@ config.status
 stamp-h1
 libmicrohttpd.pc
 libtool
+packaging/
