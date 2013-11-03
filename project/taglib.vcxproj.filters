@@ -297,6 +297,9 @@
     <ClCompile Include="..\taglib\taglib\trueaudio\trueaudioproperties.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\taglib\taglib\toolkit\trefcounter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\taglib\taglib\audioproperties.h">
@@ -597,6 +600,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\taglib\taglib\taglib_config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taglib\taglib\toolkit\trefcounter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
