@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "taglib", "taglib.vcxproj", "{DAE7A9E7-8AB2-4A57-AFA0-115652863933}"
 EndProject
@@ -51,6 +51,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sqlite3", "sqlite3.vcxproj", "{73C71BCE-520D-44F8-B373-170EE5841B27}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dnssd", "dnssd.vcxproj", "{54212C81-C78E-43E8-8D85-E64197BA0123}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "jpeg-turbo", "jpeg-turbo.vcxproj", "{2793EB05-6C64-4244-99AC-93071CF6D88C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -126,6 +128,10 @@ Global
 		{54212C81-C78E-43E8-8D85-E64197BA0123}.Debug|Win32.Build.0 = Debug|Win32
 		{54212C81-C78E-43E8-8D85-E64197BA0123}.Release|Win32.ActiveCfg = Release|Win32
 		{54212C81-C78E-43E8-8D85-E64197BA0123}.Release|Win32.Build.0 = Release|Win32
+		{2793EB05-6C64-4244-99AC-93071CF6D88C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2793EB05-6C64-4244-99AC-93071CF6D88C}.Debug|Win32.Build.0 = Debug|Win32
+		{2793EB05-6C64-4244-99AC-93071CF6D88C}.Release|Win32.ActiveCfg = Release|Win32
+		{2793EB05-6C64-4244-99AC-93071CF6D88C}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
