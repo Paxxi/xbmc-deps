@@ -50,6 +50,13 @@
 #include <sys/socket.h>
 #endif
 
+#if defined(CPU_COUNT) && (CPU_COUNT+0) < 2
+#undef CPU_COUNT
+#endif
+#if !defined(CPU_COUNT)
+#define CPU_COUNT 2
+#endif
+
 /**
  * How many rounds of operations do we do for each
  * test?
@@ -82,7 +89,7 @@ now ()
 {
   struct timeval tv;
 
-  GETTIMEOFDAY (&tv, NULL);
+  gettimeofday (&tv, NULL);
   return (((unsigned long long) tv.tv_sec * 1000LL) +
 	  ((unsigned long long) tv.tv_usec / 1000LL));
 }
@@ -219,7 +226,8 @@ testInternalGet (int port, int poll_flag)
 	}
       curl_easy_cleanup (c);
     }
-  stop (poll_flag ? "internal poll" : "internal select");
+  stop (poll_flag == MHD_USE_POLL ? "internal poll" :
+	poll_flag == MHD_USE_EPOLL_LINUX_ONLY ? "internal epoll" : "internal select");
   MHD_stop_daemon (d);
   if (cbc.pos != strlen ("/hello_world"))
     return 4;
@@ -278,7 +286,8 @@ testMultithreadedGet (int port, int poll_flag)
 	}
       curl_easy_cleanup (c);
     }
-  stop (poll_flag ? "thread with poll" : "thread with select");
+  stop ((poll_flag & MHD_USE_POLL) ? "thread with poll" :
+	(poll_flag & MHD_USE_EPOLL_LINUX_ONLY) ? "thread with epoll" : "thread with select");
   MHD_stop_daemon (d);
   if (cbc.pos != strlen ("/hello_world"))
     return 64;
@@ -304,7 +313,7 @@ testMultithreadedPoolGet (int port, int poll_flag)
   cbc.size = 2048;
   d = MHD_start_daemon (MHD_USE_SELECT_INTERNALLY | MHD_USE_DEBUG | poll_flag,
                         port, NULL, NULL, &ahc_echo, "GET",
-                        MHD_OPTION_THREAD_POOL_SIZE, 4, MHD_OPTION_END);
+                        MHD_OPTION_THREAD_POOL_SIZE, CPU_COUNT, MHD_OPTION_END);
   if (d == NULL)
     return 16;
   start_timer ();
@@ -337,7 +346,8 @@ testMultithreadedPoolGet (int port, int poll_flag)
 	}
       curl_easy_cleanup (c);
     }
-  stop (poll_flag ? "thread pool with poll" : "thread pool with select");
+  stop (0 != (poll_flag & MHD_USE_POLL) ? "thread pool with poll" : 
+	0 != (poll_flag & MHD_USE_EPOLL_LINUX_ONLY) ? "thread pool with epoll" : "thread pool with select");
   MHD_stop_daemon (d);
   if (cbc.pos != strlen ("/hello_world"))
     return 64;
@@ -358,7 +368,7 @@ testExternalGet (int port)
   fd_set rs;
   fd_set ws;
   fd_set es;
-  int max;
+  MHD_socket max;
   int running;
   struct CURLMsg *msg;
   time_t start;
@@ -454,7 +464,16 @@ testExternalGet (int port)
 		  c = NULL;
 		}
 	    }
-	  MHD_run (d);
+	  /* two possibilities here; as select sets are
+	     tiny, this makes virtually no difference
+	     in actual runtime right now, even though the
+	     number of select calls is virtually cut in half
+	     (and 'select' is the most expensive of our system
+	     calls according to 'strace') */
+	  if (0)
+	    MHD_run (d);
+	  else
+	    MHD_run_from_select (d, &rs, &ws, &es);
 	}
       if (NULL != c)
 	{
@@ -489,14 +508,18 @@ main (int argc, char *const *argv)
   response = MHD_create_response_from_buffer (strlen ("/hello_world"),
 					      "/hello_world",
 					      MHD_RESPMEM_MUST_COPY);
+  errorCount += testExternalGet (port++);
   errorCount += testInternalGet (port++, 0);
   errorCount += testMultithreadedGet (port++, 0);
   errorCount += testMultithreadedPoolGet (port++, 0);
-  errorCount += testExternalGet (port++);
 #ifndef WINDOWS
   errorCount += testInternalGet (port++, MHD_USE_POLL);
   errorCount += testMultithreadedGet (port++, MHD_USE_POLL);
   errorCount += testMultithreadedPoolGet (port++, MHD_USE_POLL);
+#endif
+#if EPOLL_SUPPORT
+  errorCount += testInternalGet (port++, MHD_USE_EPOLL_LINUX_ONLY);
+  errorCount += testMultithreadedPoolGet (port++, MHD_USE_EPOLL_LINUX_ONLY);
 #endif
   MHD_destroy_response (response);
   if (errorCount != 0)

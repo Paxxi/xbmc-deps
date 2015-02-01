@@ -1,5 +1,6 @@
 man_MANS = libmicrohttpd.3
-EXTRA_DIST = $(man_MANS) Doxyfile 
+
+SUBDIRS = . examples doxygen
 
 DISTCLEANFILES = \
   libmicrohttpd.cps \
@@ -20,15 +21,9 @@ microhttpd_TEXINFOS = \
   chapters/responseheaders.inc \
   chapters/tlsauthentication.inc \
   chapters/sessions.inc \
-  examples/basicauthentication.c \
-  examples/hellobrowser.c \
-  examples/largepost.c \
-  examples/logging.c \
-  examples/responseheaders.c \
-  examples/simplepost.c \
-  examples/tlsauthentication.c \
-  examples/sessions.c \
   fdl-1.3.texi \
   lgpl.texi \
   ecos.texi
+
+EXTRA_DIST = $(man_MANS) $(microhttpd_TEXINFOS) performance_data.png performance_data.eps
 
