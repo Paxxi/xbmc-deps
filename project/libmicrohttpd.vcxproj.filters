@@ -11,85 +11,76 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\libmicrohttpd\src\daemon\reason_phrase.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\libmicrohttpd\src\daemon\response.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\libmicrohttpd\src\daemon\base64.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\libmicrohttpd\src\daemon\basicauth.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\libmicrohttpd\src\daemon\connection.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\libmicrohttpd\src\daemon\daemon.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\libmicrohttpd\src\daemon\digestauth.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\libmicrohttpd\src\daemon\internal.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\libmicrohttpd\src\daemon\md5.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\libmicrohttpd\src\daemon\memorypool.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\libmicrohttpd\src\daemon\postprocessor.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\libmicrohttpd\src\daemon\tsearch.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\libmicrohttpd\src\daemon\reason_phrase.h">
+    <ClInclude Include="..\libmicrohttpd\src\microhttpd\base64.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\libmicrohttpd\src\daemon\response.h">
+    <ClInclude Include="..\libmicrohttpd\src\microhttpd\connection.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\libmicrohttpd\src\daemon\base64.h">
+    <ClInclude Include="..\libmicrohttpd\src\microhttpd\internal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\libmicrohttpd\src\daemon\connection.h">
+    <ClInclude Include="..\libmicrohttpd\src\microhttpd\md5.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\libmicrohttpd\src\daemon\connection_https.h">
+    <ClInclude Include="..\libmicrohttpd\src\microhttpd\memorypool.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\libmicrohttpd\src\daemon\internal.h">
+    <ClInclude Include="..\libmicrohttpd\src\microhttpd\reason_phrase.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\libmicrohttpd\src\daemon\md5.h">
+    <ClInclude Include="..\libmicrohttpd\src\microhttpd\response.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\libmicrohttpd\src\daemon\memorypool.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\libmicrohttpd\src\include\microhttpd.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\libmicrohttpd\src\include\platform.h">
+    <ClInclude Include="..\libmicrohttpd\src\microhttpd\tsearch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\libmicrohttpd\MHD_config.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\libmicrohttpd\src\daemon\tsearch.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\libmicrohttpd\src\include\plibc\plibc.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\libmicrohttpd\src\daemon\EXPORT.sym" />
+    <ClCompile Include="..\libmicrohttpd\src\microhttpd\base64.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libmicrohttpd\src\microhttpd\basicauth.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libmicrohttpd\src\microhttpd\connection.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libmicrohttpd\src\microhttpd\daemon.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libmicrohttpd\src\microhttpd\digestauth.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libmicrohttpd\src\microhttpd\internal.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libmicrohttpd\src\microhttpd\md5.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libmicrohttpd\src\microhttpd\memorypool.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libmicrohttpd\src\microhttpd\postprocessor.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libmicrohttpd\src\microhttpd\reason_phrase.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libmicrohttpd\src\microhttpd\response.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libmicrohttpd\src\microhttpd\tsearch.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libmicrohttpd\src\platform\w32functions.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\libmicrohttpd\src\microhttpd\microhttpd_dll_res.rc" />
   </ItemGroup>
 </Project>
