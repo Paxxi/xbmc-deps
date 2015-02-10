@@ -83,4 +83,7 @@
   <ItemGroup>
     <ResourceCompile Include="..\libmicrohttpd\src\microhttpd\microhttpd_dll_res.rc" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="libmicrohttpd.def" />
+  </ItemGroup>
 </Project>

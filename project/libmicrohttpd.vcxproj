@@ -39,6 +39,9 @@
   <ItemGroup>
     <ResourceCompile Include="..\libmicrohttpd\src\microhttpd\microhttpd_dll_res.rc" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="libmicrohttpd.def" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{D9B23C24-1AFF-403F-ADD9-F084EE9044E3}</ProjectGuid>
     <RootNamespace>libmicrohttpd</RootNamespace>
@@ -105,7 +108,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>..\include;..\libmicrohttpd;..\libmicrohttpd\src\include;..\libmicrohttpd\src\daemon;..\libmicrohttpd\src\include\plibc</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\include;..\libmicrohttpd;..\libmicrohttpd\src\include;..\libmicrohttpd\src\daemon</AdditionalIncludeDirectories>
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
       <ProgramDataBaseFileName>$(IntDir)$(ProjectName).pdb</ProgramDataBaseFileName>
       <PreprocessorDefinitions>_WINDLL;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -116,9 +119,8 @@
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalLibraryDirectories>
       </AdditionalLibraryDirectories>
-      <AdditionalDependencies>msvcrt.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <ModuleDefinitionFile>
-      </ModuleDefinitionFile>
+      <AdditionalDependencies>ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ModuleDefinitionFile>$(ProjectDir)libmicrohttpd.def</ModuleDefinitionFile>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
       <SubSystem>Windows</SubSystem>
       <MinimumRequiredVersion>5.01</MinimumRequiredVersion>
